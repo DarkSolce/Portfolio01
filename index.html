@@ -1110,6 +1110,44 @@
     </footer>
 
     <script>
+         // Correction pour le bouton "Retour aux projets"
+    document.addEventListener('DOMContentLoaded', function() {
+        // Gestionnaire pour le bouton de retour
+        const backButton = document.querySelector('.back-button');
+        if (backButton) {
+            backButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                showPage(this.dataset.page);
+            });
+        }
+
+        // Gestionnaire pour le formulaire de contact
+        const contactForm = document.querySelector('#page-contact form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Récupérer les données du formulaire
+                const formData = new FormData(this);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const subject = formData.get('subject');
+                const message = formData.get('message');
+                
+                // Créer le lien mailto
+                const mailtoLink = `mailto:skanderchbb@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+                
+                // Ouvrir le client de messagerie
+                window.location.href = mailtoLink;
+                
+                // Afficher un message de confirmation
+                alert('Votre client email va s\'ouvrir avec le message pré-rempli. Vous pouvez également me contacter directement à skanderchbb@gmail.com');
+                
+                // Réinitialiser le formulaire
+                this.reset();
+            });
+        }
+    });
         // Navigation functionality
         const navLinks = document.querySelectorAll('.nav-link');
         const pages = document.querySelectorAll('.page');
