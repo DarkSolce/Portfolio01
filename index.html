@@ -671,4 +671,224 @@
 
     <script>
         // Navigation functionality
-        const navLinks = document.queryS
+        const navLinks = document.querySelectorAll('.nav-link');
+        const pages = document.querySelectorAll('.page');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Handle navigation
+        function showPage(pageName) {
+            // Hide all pages
+            pages.forEach(page => page.classList.add('hidden'));
+            
+            // Show target page
+            const targetPage = document.getElementById(`page-${pageName}`);
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+                
+                // Trigger scroll animations
+                setTimeout(() => {
+                    const scrollElements = targetPage.querySelectorAll('.scroll-element');
+                    scrollElements.forEach(el => {
+                        el.classList.add('visible');
+                    });
+                }, 100);
+            }
+
+            // Update active nav link
+            navLinks.forEach(link => {
+                link.classList.remove('nav-active');
+                if (link.dataset.page === pageName) {
+                    link.classList.add('nav-active');
+                }
+            });
+
+            // Close mobile menu
+            mobileMenu.classList.add('hidden');
+        }
+
+        // Add click listeners to nav links
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage(link.dataset.page);
+            });
+        });
+
+        // Mobile menu toggle
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Typewriter effect
+        const roles = [
+            "Data Analyst.",
+            "Business Intelligence.",
+            "Ingénieur Électrique.",
+            "Développeur Python.",
+            "Expert SQL.",
+            "Analyste de Données.",
+            "Consultant BI.",
+            "Spécialiste Azure.",
+            "Data Scientist.",
+            "Problem Solver."
+        ];
+
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeWriter() {
+            const typewriterElement = document.getElementById('typewriter');
+            if (!typewriterElement) return;
+
+            const current = roles[roleIndex];
+            
+            if (!isDeleting && charIndex < current.length) {
+                typewriterElement.textContent = current.substring(0, charIndex + 1);
+                charIndex++;
+                setTimeout(typeWriter, 100);
+            } else if (isDeleting && charIndex > 0) {
+                typewriterElement.textContent = current.substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(typeWriter, 50);
+            } else {
+                if (!isDeleting) {
+                    isDeleting = true;
+                    setTimeout(typeWriter, 2000);
+                } else {
+                    isDeleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                    setTimeout(typeWriter, 500);
+                }
+            }
+        }
+
+        // Scroll animations
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScrollAnimations() {
+            const scrollElements = document.querySelectorAll('.scroll-element:not(.visible)');
+            scrollElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top <= window.innerHeight * 0.8) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        // Contact form handler
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize page
+            showPage('home');
+            
+            // Start typewriter effect
+            setTimeout(typeWriter, 1000);
+            
+            // Initial scroll animation check
+            handleScrollAnimations();
+
+            // Contact form
+            const contactForm = document.querySelector('#page-contact form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(contactForm);
+                    const name = formData.get('name');
+                    const email = formData.get('email');
+                    const subject = formData.get('subject');
+                    const message = formData.get('message');
+                    
+                    // Create mailto link
+                    const mailtoLink = `mailto:skanderchbb@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+                    
+                    // Open email client
+                    window.location.href = mailtoLink;
+                    
+                    // Show success message
+                    alert('Votre client email va s\'ouvrir avec le message pré-rempli. Vous pouvez également me contacter directement à skanderchbb@gmail.com');
+                });
+            }
+        });
+
+        // Scroll event listener
+        window.addEventListener('scroll', handleScrollAnimations);
+
+        // Smooth scrolling for anchor links
+        document.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A' && e.target.getAttribute('href') && e.target.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const targetId = e.target.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+
+        // Add some interactive effects
+        document.addEventListener('mouseover', function(e) {
+            if (e.target.classList.contains('project-card')) {
+                e.target.style.transform = 'translateY(-8px) scale(1.02)';
+            }
+        });
+
+        document.addEventListener('mouseout', function(e) {
+            if (e.target.classList.contains('project-card')) {
+                e.target.style.transform = 'translateY(0) scale(1)';
+            }
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease-in-out';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Add theme persistence (optional)
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.className = savedTheme;
+        }
+
+        // Performance optimization: Debounce scroll events
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            if (scrollTimeout) {
+                clearTimeout(scrollTimeout);
+            }
+            scrollTimeout = setTimeout(handleScrollAnimations, 10);
+        });
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Add focus management for accessibility
+        navLinks.forEach(link => {
+            link.addEventListener('focus', function() {
+                this.style.outline = '2px solid #89b4fa';
+            });
+            link.addEventListener('blur', function() {
+                this.style.outline = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
