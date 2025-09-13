@@ -140,6 +140,22 @@
             border-radius: 50%;
             background: #89b4fa;
         }
+        .scrum-process {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .scrum-role {
+            background: #45475a;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .scrum-role-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body class="bg-ctp-base text-ctp-text min-h-screen">
@@ -237,7 +253,7 @@
                         </a>
                         <a href="https://github.com" target="_blank" class="hover:scale-110 hover:text-ctp-blue transition-all duration-200 p-3 bg-ctp-surface1 rounded-full">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.020.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.020.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c极 0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                         </a>
                     </div>
@@ -428,6 +444,7 @@
                         <span class="tech-badge bg-ctp-blue text-ctp-crust text-sm px-3 py-1 rounded-full">SQL Server</span>
                         <span class="tech-badge bg-ctp-blue text-ctp-crust text-sm px-3 py-1 rounded-full">Power BI</span>
                         <span class="tech-badge bg-ctp-blue text-ctp-crust text-sm px-3 py-1 rounded-full">React</span>
+                        <span class="tech-badge bg-ctp-blue text-ctp-crust text-sm px-3 py-1 rounded-full">FastAPI</span>
                         <span class="tech-badge bg-ctp-blue text-ctp-crust text-sm px-3 py-1 rounded-full">Scrum</span>
                     </div>
                 </div>
@@ -474,6 +491,54 @@
                             </ul>
                         </div>
                     </div>
+                </div>
+
+                <!-- Methodologies -->
+                <div class="bg-ctp-surface1 rounded-xl p-8 mb-12 scroll-element">
+                    <h2 class="text-3xl font-bold mb-6 text-ctp-blue">Méthodologies</h2>
+                    
+                    <h3 class="text-xl font-semibold mb-4 text-ctp-green">Méthodologie Agile Scrum</h3>
+                    <p class="text-ctp-subtext0 mb-6">
+                        Le projet a été développé selon la méthodologie Agile Scrum, avec des sprints de deux semaines. 
+                        Cette approche a permis une adaptation rapide aux changements et une livraison progressive des fonctionnalités.
+                    </p>
+                    
+                    <div class="scrum-process">
+                        <div class="scrum-role">
+                            <div class="scrum-role-icon">👨‍💼</div>
+                            <h4 class="font-semibold mb-2">Product Owner</h4>
+                            <p class="text-ctp-subtext0 text-sm">M. Rayen Jmili (Entreprise)</p>
+                        </div>
+                        <div class="scrum-role">
+                            <div class="scrum-role-icon">👨‍🏫</div>
+                            <h4 class="font-semibold mb-2">Scrum Master</h4>
+                            <p class="text-ctp-subtext0 text-sm">M. Bilel Zemzem (ISET Bizerte)</p>
+                        </div>
+                        <div class="scrum-role">
+                            <div class="scrum-role-icon">👨‍💻</div>
+                            <h4 class="font-semibold mb-2">Équipe de Développement</h4>
+                            <p class="text-ctp-subtext0 text-sm">Skander Chebbi & Bayrem Jmili</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-8 mb-4 text-ctp-green">Processus ETL (Extract, Transform, Load)</h3>
+                    <p class="text-ctp-subtext0 mb-4">
+                        Le processus ETL a été essentiel pour transformer les données brutes du FEC en informations exploitables :
+                    </p>
+                    <ul class="text-ctp-subtext0 space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-ctp-green mr-2">•</span>
+                            <strong>Extraction:</strong> Collecte des données brutes provenant du fichier FEC
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-ctp-green mr-2">•</span>
+                            <strong>Transformation:</strong> Nettoyage, enrichissement et conversion des données
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-ctp-green mr-2">•</span>
+                            <strong>Chargement:</strong> Insertion des données transformées dans la base SQL Server
+                        </li>
+                    </ul>
                 </div>
 
                 <!-- Technical Implementation -->
@@ -555,31 +620,41 @@
                 <div class="bg-ctp-surface1 rounded-xl p-8 mb-12 scroll-element">
                     <h2 class="text-3xl font-bold mb-6 text-ctp-blue">Développement du Projet</h2>
                     
-                    <h3 class="text-xl font-semibold mb-4 text-ctp-green">Méthodologie Scrum</h3>
-                    <p class="text-ctp-subtext0 mb-6">
-                        Le projet a été développé selon la méthodologie Agile Scrum, avec des sprints de deux semaines. 
-                        J'ai joué un rôle central dans l'équipe de développement, participant à toutes les cérémonies Scrum :
-                    </p>
+                    <h3 class="text-xl font-semibold mb-4 text-ctp-green">Sprints Réalisés</h3>
                     
                     <div class="phase-timeline mb-8">
                         <div class="phase-item">
-                            <h4 class="text-lg font-semibold mb-2">Sprint 1 (3 semaines) - Structure et Affichage</h4>
+                            <h4 class="text-lg font-semibold mb-2">Sprint 1 (3 semaines) - Importation et application d'ETL du fichier FEC</h4>
                             <ul class="text-ctp-subtext0 space-y-2">
-                                <li>Structuration du projet avec HTML/CSS/JS et React</li>
-                                <li>Affichage d'une liste de recettes sur la page d'accueil</li>
-                                <li>Affichage des détails d'une recette (ingrédients et étapes)</li>
-                                <li>Ajout de 3 recettes statiques pour tester l'affichage</li>
-                                <li>Rendre le site responsive pour une utilisation mobile</li>
+                                <li>Importation du fichier FEC via l'interface React</li>
+                                <li>Exécution du pipeline ETL en Python/SQLAlchemy</li>
+                                <li>Validation comptable automatisée</li>
+                                <li>Enrichissement des écritures avec des dimensions analytiques</li>
                             </ul>
                         </div>
                         <div class="phase-item">
-                            <h4 class="text-lg font-semibold mb-2">Sprint 2 (4 semaines) - Ajout Dynamique et Recherche</h4>
+                            <h4 class="text-lg font-semibold mb-2">Sprint 2 (4 semaines) - Navigation et recherche des écritures comptables</h4>
                             <ul class="text-ctp-subtext0 space-y-2">
-                                <li>Ajout d'une recette via un formulaire (titre, ingrédients, instructions)</li>
-                                <li>Stockage local des recettes ajoutées (localStorage)</li>
-                                <li>Recherche d'une recette par son nom</li>
-                                <li>Amélioration de l'interface utilisateur (images, couleurs, typographie)</li>
-                                <li>Démonstration du projet final (présentation, test utilisateur)</li>
+                                <li>Développement de l'interface de consultation (Balance, Journal, Balance auxiliaire, Grand Livre)</li>
+                                <li>Mise en place des filtres de recherche avancés</li>
+                                <li>Connexion en temps réel à la base de données SQL Server</li>
+                            </ul>
+                        </div>
+                        <div class="phase-item">
+                            <h4 class="text-lg font-semibold mb-2">Sprint 3 (3 semaines) - Création de tableaux de bord interactifs</h4>
+                            <ul class="text-ctp-subtext0 space-y-2">
+                                <li>Connexion entre Power BI et SQL Server</li>
+                                <li>Conception de tableaux de bord dynamiques (Bilan synthétique, Graphiques en anneau, Courbes de tendance)</li>
+                                <li>Analyse temporelle segmentée des écritures comptables</li>
+                            </ul>
+                        </div>
+                        <div class="phase-item">
+                            <h4 class="text-lg font-semibold mb-2">Sprint 4 (2 semaines) - Intégration des tableaux de bord Power BI dans React</h4>
+                            <ul class="text-ctp-subtext0 space-y-2">
+                                <li>Génération et publication des rapports Power BI</li>
+                                <li>Configuration des paramètres d'intégration (iFrame)</li>
+                                <li>Intégration dans l'application React</li>
+                                <li>Tests et validation de l'expérience utilisateur</li>
                             </ul>
                         </div>
                     </div>
@@ -589,17 +664,17 @@
                         <div>
                             <h4 class="font-semibold mb-2 text-ctp-blue">Développement Backend</h4>
                             <ul class="text-ctp-subtext0 space-y-2">
-                                <li>Conception et implémentation de l'API REST avec Django</li>
+                                <li>Conception et implémentation de l'API REST avec FastAPI</li>
                                 <li>Développement des algorithmes de traitement du FEC avec Pandas</li>
                                 <li>Modélisation de la base de données SQL Server</li>
-                                <li>Implémentation des tâches asynchrones avec Celery</li>
+                                <li>Implémentation des tâches asynchrones pour le traitement des fichiers</li>
                             </ul>
                         </div>
                         <div>
                             <h4 class="font-semibold mb-2 text-ctp-blue">Développement Frontend</h4>
                             <ul class="text-ctp-subtext0 space-y-2">
                                 <li>Création des composants React réutilisables</li>
-                                <li>Intégration des visualisations Power BI</li>
+                                <li>Intégration des visualisations Power BI via iFrame</li>
                                 <li>Gestion de l'état d'application avec Redux</li>
                                 <li>Optimisation des performances pour les grands volumes de données</li>
                             </ul>
@@ -643,7 +718,7 @@
                                 <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">React</span>
                                 <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Redux</span>
                                 <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Power BI</span>
-                                <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Celery</span>
+                                <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">FastAPI</span>
                                 <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Docker</span>
                                 <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Git</span>
                             </div>
@@ -685,7 +760,7 @@
                         </a>
                         <a href="https://github.com/DarkSolce/CoExpert" target="_blank" class="bg-ctp-surface2 hover:bg-ctp-surface1 text-ctp-text px-6 py-3 rounded-full font-semibold transition-colors flex items-center">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 极 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.极.957-.266 1.983-.399 3.003-.404 1.020.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                             Code Source GitHub
                         </a>
@@ -776,7 +851,7 @@
                     </div>
                       <ul class="text-ctp-subtext0 space-y-2">
                         <li>• Découverte des pratiques industrielles en maintenance électrique et sécurité</li>
-                        <li>• Participation à la surveillance et à l’entretien des installations</li>
+                        <li>• Participation à la surveillance et à l'entretien des installations</li>
                     
                     </ul>
                         <div class="mt-4 flex flex-wrap gap-2">
@@ -824,7 +899,7 @@
                             </div>
 
                             <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
-                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/Certificat%20SQL_page-0001.jpg" alt="SQL for Data Science" class="w-16 h-16 mx-auto mb-4 rounded-lg">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/Certificat%20SQL_page-0001.jpg" alt="SQL for Data Science" class="w-极 h-16 mx-auto mb-4 rounded-lg">
                                 <h3 class="font-bold text-center mb-2">SQL for Data Science</h3>
                                 <p class="text-sm text-ctp-subtext0 text-center mb-2">Great Learning - Nov. 2024</p>
                                 <div class="flex flex-wrap gap-1 justify-center">
@@ -840,7 +915,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
                                 <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/microsoft-certified-azure-fundamentals.png" alt="Azure AZ-900" class="w-16 h-16 mx-auto mb-4 rounded-lg">
-                                <h3 class="font-bold text-center mb-2">Azure AZ-900</h3>
+                                <h3 class="font-bold text极 mb-2">Azure AZ-900</h3>
                                 <p class="text-sm text-ctp-subtext0 text-center mb-2">Microsoft - Janv. 2025</p>
                                 <div class="flex flex-wrap gap-1 justify-center">
                                     <span class="bg-ctp-sky text-ctp-crust text-xs px-2 py-1 rounded">Azure</span>
@@ -850,9 +925,9 @@
                             <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
                                 <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/microsoft-certified-azure-fundamentals.png" alt="AI-900" class="w-16 h-16 mx-auto mb-4 rounded-lg">
                                 <h3 class="font-bold text-center mb-2">Azure AI Fundamentals (AI-900)</h3>
-                                <p class="text-sm text-ctp-subtext0 text-center mb-2">Microsoft - Mai 2025</p>
+                                <p class="text-sm text-ctp-subtext0 text-center mb-极">Microsoft - Mai 2025</p>
                                 <div class="flex flex-wrap gap-1 justify-center">
-                                    <span class="bg-ctp-sky text-ctp-crust text-xs px-2 py-1 rounded">Azure AI</span>
+                                    <span class="bg-极-sky text-ctp-crust text-xs px-2 py-1 rounded">Azure AI</span>
                                 </div>
                             </div>
                         </div>
@@ -861,7 +936,7 @@
                     <!-- Cybersecurity Section -->
                     <div class="scroll-element">
                         <h2 class="text-2xl font-bold mb-6 text-ctp-flamingo">Cybersécurité</h2>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <极 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
                                 <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/image.png" alt="Cybersecurity Fundamentals" class="w-16 h-16 mx-auto mb-4 rounded-lg">
                                 <h3 class="font-bold text-center mb-2">Cybersecurity Fundamentals</h3>
@@ -899,11 +974,11 @@
         <div class="page hidden" id="page-contact">
             <div class="max-w-4xl mx-auto px-4 py-12">
                 <div class="text-center mb-12 scroll-element">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-ctp-blue">Contact</h1>
+                    <h1 class="text-4xl md:text-5极 font-bold mb-6 text-ctp-blue">Contact</h1>
                     <p class="text-ctp-subtext0 text-lg">Restons en contact pour discuter d'opportunités</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 md:极-cols-2 gap-8">
                     <!-- Contact Information -->
                     <div class="space-y-6 scroll-element">
                         <div class="bg-ctp-surface1 rounded-xl p-6">
@@ -913,7 +988,7 @@
                                 <div class="flex items-center space-x-4">
                                     <div class="bg-ctp-blue rounded-full p-3">
                                         <svg class="w-5 h-5 text-ctp-crust" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h极c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                                         </svg>
                                     </div>
                                     <div>
@@ -925,11 +1000,11 @@
                                 <div class="flex items-center space-x-4">
                                     <div class="bg-ctp-blue rounded-full p-3">
                                         <svg class="w-5 h-5 text-ctp-crust" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9极3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                                         </svg>
                                     </div>
                                     <div>
-                                        <p class="font-semibold">LinkedIn</p>
+                                        <p class="font-semib极">LinkedIn</p>
                                         <a href="https://www.linkedin.com/in/skander-chebbi-a52779270/" target="_blank" class="text-ctp-blue hover:text-ctp-sky">Profil LinkedIn</a>
                                     </div>
                                 </div>
@@ -937,7 +1012,7 @@
                                 <div class="flex items-center space-x-4">
                                     <div class="bg-ctp-blue rounded-full p-3">
                                         <svg class="w-5 h-5 text-ctp-crust" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-极-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                                         </svg>
                                     </div>
                                     <div>
@@ -982,7 +1057,7 @@
                                     <p class="text-sm">Power BI</p>
                                 </div>
                                 <div class="text-center">
-                                    <div class="bg-ctp-green rounded-full w-12 h-12 mx-auto mb-2 flex items-center justify-center">
+                                    <div class="bg-ctp-green rounded-full w-12 h-12 mx-auto mb极 flex items-center justify-center">
                                         <span class="text-ctp-crust font-bold">AZ</span>
                                     </div>
                                     <p class="text-sm">Azure</p>
@@ -1003,14 +1078,14 @@
                                 <div>
                                     <label for="email" class="block text-sm font-medium mb-2">Email</label>
                                     <input type="email" id="email" name="email" class="w-full px-4 py-2 bg-ctp-surface2 border border-ctp-overlay0 rounded-lg focus:ring-2 focus:ring-ctp-blue focus:border-transparent" required>
-                                </div>
+                                </极>
                                 <div>
                                     <label for="subject" class="block text-sm font-medium mb-2">Sujet</label>
                                     <input type="text" id="subject" name="subject" class="w-full px-4 py-2 bg-ctp-surface2 border border-ctp-overlay0 rounded-lg focus:ring-2 focus:ring-ctp-blue focus:border-transparent" required>
                                 </div>
                                 <div>
                                     <label for="message" class="block text-sm font-medium mb-2">Message</label>
-                                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 bg-ctp-surface2 border border-ctp-overlay0 rounded-lg focus:ring-2 focus:ring-ctp-blue focus:border-transparent" required></textarea>
+                                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 bg-ctp-surface极 border border-ctp-overlay0 rounded-lg focus:ring-2 focus:ring-ctp-blue focus:border-transparent" required></textarea>
                                 </div>
                                 <button type="submit" class="w-full bg-gradient-to-r from-ctp-blue to-ctp-sky hover:from-ctp-sky hover:to-ctp-lavender text-ctp-crust font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105">
                                     Envoyer le Message
@@ -1029,7 +1104,7 @@
         <div class="flex justify-center space-x-4 mt-4">
             <a href="mailto:skanderchbb@gmail.com" class="hover:scale-110 hover:text-ctp-blue transition-all duration-200">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    <path d="M20 4H4c-1.1 极-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6极8 5 8-5v2z"/>
                 </svg>
             </a>
             <a href="https://www.linkedin.com/in/skander-chebbi-a52779270/" target="_blank" class="hover:scale-110 hover:text-ctp-blue transition-all duration-200">
@@ -1205,7 +1280,7 @@
                     const message = formData.get('message');
                     
                     // Create mailto link
-                    const mailtoLink = `mailto:skanderchbb@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+                    const mailto极 = `mailto:skanderchbb@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
                     
                     // Open email client
                     window.location.href = mailtoLink;
