@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skander Chebbi - Data Analyst Portfolio</title>
+    <meta name="description" content="Portfolio de Skander Chebbi, Data Analyst junior en BI. Projets, certifications et compétences en AI, Data Science et Business Intelligence.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'ctp': {
+                            'base': '#1e1e2e',
+                            'mantle': '#181825',
+                            'crust': '#11111b',
+                            'surface0': '#313244',
+                            'surface1': '#45475a',
+                            'surface2': '#585b70',
+                            'overlay0': '#6c7086',
+                            'overlay1': '#7f849c',
+                            'overlay2': '#9399b2',
+                            'subtext0': '#a6adc8',
+                            'subtext1': '#bac2de',
+                            'text': '#cdd6f4',
+                            'blue': '#89b4fa',
+                            'lavender': '#b4befe',
+                            'sky': '#89dceb',
+                            'green': '#a6e3a1',
+                            'flamingo': '#f2cdcd'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['SF Pro Display', 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .scroll-element {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+        .scroll-element.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .typewriter {
+            border-right: 2px solid #89b4fa;
+            animation: blink 1.5s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { border-color: #89b4fa; }
+            51%, 100% { border-color: transparent; }
+        }
+        .nav-active {
+            background-color: #45475a !important;
+            color: #cdd6f4 !important;
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="bg-ctp-base text-ctp-text min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-ctp-surface2 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="#" class="bg-ctp-surface1 text-ctp-text hover:bg-ctp-overlay2 hover:text-ctp-base rounded-3xl p-3 transition-all duration-100 hover:scale-110 active:scale-95">
+                    <div class="h-8 w-8 rounded-full bg-ctp-blue flex items-center justify-center text-ctp-crust font-bold">
+                        SC
+                    </div>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center space-x-2">
+                <a href="#" class="nav-link bg-ctp-surface1 text-ctp-text hover:bg-ctp-overlay2 hover:text-ctp-base rounded-3xl px-4 py-2 transition-all duration-100 hover:scale-110 active:scale-95 nav-active" data-page="home">
+                    Accueil
+                </a>
+                <a href="#" class="nav-link bg-ctp-surface1 text-ctp-text hover:bg-ctp-overlay2 hover:text-ctp-base rounded-3xl px-4 py-2 transition-all duration-100 hover:scale-110 active:scale-95" data-page="about">
+                    À propos
+                </a>
+                <a href="#" class="nav-link bg-ctp-surface1 text-ctp-text hover:bg-ctp-overlay2 hover:text-ctp-base rounded-3xl px-4 py-2 transition-all duration-100 hover:scale-110 active:scale-95" data-page="projects">
+                    Projets
+                </a>
+                <a href="#" class="nav-link bg-ctp-surface1 text-ctp-text hover:bg-ctp-overlay2 hover:text-ctp-base rounded-3xl px-4 py-2 transition-all duration-100 hover:scale-110 active:scale-95" data-page="experience">
+                    Expérience
+                </a>
+                <a href="#" class="nav-link bg-ctp-surface1 text-ctp-text hover:bg-ctp-overlay2 hover:text-ctp-base rounded-3xl px-4 py-2 transition-all duration-100 hover:scale-110 active:scale-95" data-page="certifications">
+                    Certifications
+                </a>
+                <a href="#" class="nav-link bg-ctp-surface1 text-ctp-text hover:bg-ctp-overlay2 hover:text-ctp-base rounded-3xl px-4 py-2 transition-all duration-100 hover:scale-110 active:scale-95" data-page="contact">
+                    Contact
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden rounded-3xl p-3 hover:bg-ctp-overlay2">
+                <div class="flex flex-col space-y-1">
+                    <span class="block h-0.5 w-6 bg-current"></span>
+                    <span class="block h-0.5 w-6 bg-current"></span>
+                    <span class="block h-0.5 w-6 bg-current"></span>
+                </div>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-ctp-surface2 pb-4">
+            <div class="flex flex-col space-y-2 px-4">
+                <a href="#" class="nav-link block py-2 text-center bg-ctp-surface1 rounded-3xl nav-active" data-page="home">Accueil</a>
+                <a href="#" class="nav-link block py-2 text-center bg-ctp-surface1 rounded-3xl" data-page="about">À propos</a>
+                <a href="#" class="nav-link block py-2 text-center bg-ctp-surface1 rounded-3xl" data-page="projects">Projets</a>
+                <a href="#" class="nav-link block py-2 text-center bg-ctp-surface1 rounded-3xl" data-page="experience">Expérience</a>
+                <a href="#" class="nav-link block py-2 text-center bg-ctp-surface1 rounded-3xl" data-page="certifications">Certifications</a>
+                <a href="#" class="nav-link block py-2 text-center bg-ctp-surface1 rounded-3xl" data-page="contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" class="min-h-screen">
+        <!-- Page: Home -->
+        <div class="page" id="page-home">
+            <div class="min-h-screen bg-gradient-to-br from-ctp-base to-ctp-mantle py-12 px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="mb-8 scroll-element">
+                        <div class="rounded-full mx-auto mb-6 border-4 border-ctp-overlay1 hover:border-ctp-blue hover:scale-105 transition-transform duration-300 w-48 h-48 bg-gradient-to-br from-ctp-blue to-ctp-lavender flex items-center justify-center">
+                            <span class="text-6xl font-bold text-ctp-crust">SC</span>
+                        </div>
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                            Salut, je suis <span class="text-ctp-blue">Skander</span>!
+                        </h1>
+                        <div class="text-xl md:text-2xl mt-3">
+                            <span>Je suis </span>
+                            <span id="typewriter" class="text-ctp-blue font-semibold typewriter">Data Analyst</span>
+                        </div>
+                        <p class="mt-4 text-base md:text-lg text-ctp-subtext0 max-w-xl mx-auto">
+                            Diplômé en Génie Électrique avec une expertise en Business Intelligence et Data Analytics.
+                            <br><a href="#" class="underline text-ctp-blue hover:text-ctp-lavender transition-colors nav-link" data-page="about">En savoir plus →</a>
+                        </p>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex justify-center space-x-4 mb-12 scroll-element">
+                        <a href="mailto:skanderchbb@gmail.com" class="hover:scale-110 hover:text-ctp-blue transition-all duration-200 p-3 bg-ctp-surface1 rounded-full">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/skander-chebbi-a52779270/" target="_blank" class="hover:scale-110 hover:text-ctp-blue transition-all duration-200 p-3 bg-ctp-surface1 rounded-full">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="hover:scale-110 hover:text-ctp-blue transition-all duration-200 p-3 bg-ctp-surface1 rounded-full">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Recent Projects Preview -->
+                    <div class="scroll-element">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-left">Projets Récents</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                            <!-- Project Card -->
+                            <div class="project-card bg-ctp-mantle rounded-xl overflow-hidden shadow-lg border border-ctp-surface1">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/coexpert.jpeg" alt="CoExpert Project" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-semibold mb-2">CoExpert</h3>
+                                    <div class="flex flex-wrap gap-2 mb-3">
+                                        <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Python</span>
+                                        <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">SQL Server</span>
+                                        <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Power BI</span>
+                                    </div>
+                                    <p class="text-ctp-subtext0 text-sm">Application d'aide à la décision pour l'expertise financière...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button class="nav-link bg-gradient-to-r from-ctp-blue to-ctp-sky hover:from-ctp-sky hover:to-ctp-lavender text-ctp-crust font-semibold py-3 px-6 rounded-full transition-all transform hover:scale-105" data-page="projects">
+                                Voir Tous les Projets
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page: About -->
+        <div class="page hidden" id="page-about">
+            <div class="max-w-4xl mx-auto px-4 py-12">
+                <div class="text-center mb-12 scroll-element">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-ctp-blue">À Propos de Moi</h1>
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-ctp-blue to-ctp-lavender flex items-center justify-center">
+                        <span class="text-3xl font-bold text-ctp-crust">SC</span>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="bg-ctp-surface1 rounded-xl p-8 scroll-element">
+                        <h2 class="text-2xl font-bold mb-4 text-ctp-blue">Mon Parcours</h2>
+                        <p class="text-ctp-subtext0 leading-relaxed">
+                            Diplômé en Génie Électrique (ISET Radès), avec une expérience pratique en maintenance électrique industrielle et pétrolière sur PLC, moteurs et systèmes de pompage. Actuellement en Master Analyse de Données et Business Intelligence (CODABI), j'allie expertise terrain et data pour optimiser la fiabilité, la sécurité et la performance des opérations.
+                        </p>
+                    </div>
+
+                    <div class="bg-ctp-surface1 rounded-xl p-8 scroll-element">
+                        <h2 class="text-2xl font-bold mb-4 text-ctp-blue">Compétences Techniques</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="font-semibold mb-2">Data Analytics</h3>
+                                <ul class="text-ctp-subtext0 space-y-1">
+                                    <li>• Python</li>
+                                    <li>• SQL</li>
+                                    <li>• Power BI</li>
+                                    <li>• Microsoft Azure</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-2">Maintenance Industrielle</h3>
+                                <ul class="text-ctp-subtext0 space-y-1">
+                                    <li>• PLC</li>
+                                    <li>• Moteurs électriques</li>
+                                    <li>• Systèmes de pompage</li>
+                                    <li>• AutoCAD</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-ctp-surface1 rounded-xl p-8 scroll-element">
+                        <h2 class="text-2xl font-bold mb-4 text-ctp-blue">Objectifs Professionnels</h2>
+                        <p class="text-ctp-subtext0 leading-relaxed">
+                            Passionné par l'application de l'ingénierie et de l'analyse de données à des projets innovants. Je cherche à contribuer à l'optimisation des processus industriels à travers des solutions data-driven, en combinant mon expertise technique en génie électrique avec mes compétences en business intelligence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page: Projects -->
+        <div class="page hidden" id="page-projects">
+            <div class="max-w-6xl mx-auto px-4 py-12">
+                <div class="text-center mb-12 scroll-element">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-ctp-blue">Mes Projets</h1>
+                    <p class="text-ctp-subtext0 text-lg">Découvrez mes réalisations en Data Analytics et Business Intelligence</p>
+                </div>
+
+                <div class="space-y-12">
+                    <!-- Featured Project -->
+                    <div class="bg-ctp-surface1 rounded-xl overflow-hidden shadow-lg scroll-element">
+                        <div class="md:flex">
+                            <div class="md:w-1/2">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/coexpert.jpeg" alt="CoExpert" class="w-full h-64 md:h-full object-cover">
+                            </div>
+                            <div class="md:w-1/2 p-8">
+                                <div class="flex items-center mb-4">
+                                    <span class="bg-ctp-green text-ctp-crust text-sm px-3 py-1 rounded-full mr-3">Projet Principal</span>
+                                </div>
+                                <h2 class="text-3xl font-bold mb-4 text-ctp-blue">CoExpert</h2>
+                                <p class="text-ctp-subtext0 mb-4">
+                                    <strong>Contexte:</strong> Application d'aide à la décision pour l'expertise financière. Automatisation et optimisation de l'analyse du FEC en centralisant, structurant et visualisant les écritures comptables.
+                                </p>
+                                <p class="text-ctp-subtext0 mb-4">
+                                    <strong>Rôle:</strong> Développement complet en méthodologie Scrum. Exploration et traitement du FEC (Python), modélisation des données (SQL Server), tableaux de bord (Power BI), intégration front-end (React).
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Python</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">SQL Server</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Power BI</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">React</span>
+                                </div>
+                                <p class="text-sm text-ctp-green font-semibold mb-4">
+                                    📈 Résultats: Analyse 30% plus rapide, détection accélérée des anomalies
+                                </p>
+                                <a href="https://www.coexpert.com/" target="_blank" class="bg-ctp-blue hover:bg-ctp-sky text-ctp-crust px-6 py-2 rounded-full font-semibold transition-colors">
+                                    Voir le Projet →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Projects Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-ctp-surface1 rounded-xl overflow-hidden shadow-lg scroll-element">
+                            <div class="h-48 bg-gradient-to-br from-ctp-blue to-ctp-sky"></div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Analyse Prédictive</h3>
+                                <p class="text-ctp-subtext0 text-sm mb-4">Modèle de prédiction de maintenance préventive pour équipements industriels.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Python</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">ML</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-ctp-surface1 rounded-xl overflow-hidden shadow-lg scroll-element">
+                            <div class="h-48 bg-gradient-to-br from-ctp-lavender to-ctp-blue"></div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Dashboard BI</h3>
+                                <p class="text-ctp-subtext0 text-sm mb-4">Tableau de bord interactif pour le suivi des KPIs industriels.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Power BI</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">SQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-ctp-surface1 rounded-xl overflow-hidden shadow-lg scroll-element">
+                            <div class="h-48 bg-gradient-to-br from-ctp-green to-ctp-blue"></div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Automatisation ETL</h3>
+                                <p class="text-ctp-subtext0 text-sm mb-4">Pipeline de données automatisé pour l'ingestion et transformation de données.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Python</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Azure</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page: Experience -->
+        <div class="page hidden" id="page-experience">
+            <div class="max-w-4xl mx-auto px-4 py-12">
+                <div class="text-center mb-12 scroll-element">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-ctp-blue">Expérience Professionnelle</h1>
+                    <p class="text-ctp-subtext0 text-lg">Mon parcours professionnel et mes stages</p>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Experience Item -->
+                    <div class="bg-ctp-surface1 rounded-xl p-6 scroll-element">
+                        <div class="flex flex-col md:flex-row md:items-center mb-4">
+                            <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/logo-dynamix-full-1.webp" alt="Dynamix Services" class="w-16 h-16 rounded-lg mb-4 md:mb-0 md:mr-6 object-contain bg-white p-2">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-ctp-blue">Stagiaire en alternance</h3>
+                                <p class="text-ctp-text font-semibold">Dynamix Services</p>
+                                <p class="text-ctp-subtext0">Avril 2025 – Mai 2025 | Bizerte, Tunisie</p>
+                            </div>
+                        </div>
+                        <ul class="text-ctp-subtext0 space-y-2">
+                            <li>• Participation à un projet décisionnel: Power BI pour la visualisation, Python pour l'analyse, SQL Server pour la donnée</li>
+                            <li>• Renforcement des compétences en data analytics dans un contexte réel</li>
+                        </ul>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Power BI</span>
+                            <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Python</span>
+                            <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">SQL Server</span>
+                            <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">React.js</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-ctp-surface1 rounded-xl p-6 scroll-element">
+                        <div class="flex flex-col md:flex-row md:items-center mb-4">
+                            <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/sotulub_logo.jpeg" alt="SOTULUB" class="w-16 h-16 rounded-lg mb-4 md:mb-0 md:mr-6 object-contain bg-white p-2">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-ctp-blue">Stagiaire - Stage de fin d'études</h3>
+                                <p class="text-ctp-text font-semibold">SOTULUB</p>
+                                <p class="text-ctp-subtext0">Mars 2024 – Juin 2024 | Bizerte, Tunisie</p>
+                            </div>
+                        </div>
+                        <ul class="text-ctp-subtext0 space-y-2">
+                            <li>• Maintenance, rénovation, mise à niveau de moteurs à pompe et systèmes électriques industriels</li>
+                            <li>• Maintenance préventive, dépannage, optimisation des performances</li>
+                        </ul>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">AutoCAD</span>
+                            <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">EPLAN</span>
+                            <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">CAO</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-ctp-surface1 rounded-xl p-6 scroll-element">
+                        <div class="flex flex-col md:flex-row md:items-center mb-4">
+                            <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/1631324856832.jpeg" alt="STIR" class="w-16 h-16 rounded-lg mb-4 md:mb-0 md:mr-6 object-contain bg-white p-2">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-ctp-blue">Stagiaire - Perfectionnement</h3>
+                                <p class="text-ctp-text font-semibold">STIR</p>
+                                <p class="text-ctp-subtext0">Janvier 2023 – Mars 2023 | Bizerte, Tunisie</p>
+                            </div>
+                        </div>
+                        <ul class="text-ctp-subtext0 space-y-2">
+                            <li>• Surveillance et entretien de systèmes électriques: moteurs, pompes, automatismes</li>
+                            <li>• Étude de cas sur procédures de raffinage, sécurité et fiabilité des installations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page: Certifications -->
+        <div class="page hidden" id="page-certifications">
+            <div class="max-w-6xl mx-auto px-4 py-12">
+                <div class="text-center mb-12 scroll-element">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-ctp-blue">Certifications</h1>
+                    <p class="text-ctp-subtext0 text-lg">Mes certifications et formations continues</p>
+                </div>
+
+                <div class="space-y-12">
+                    <!-- AI & Data Science Section -->
+                    <div class="scroll-element">
+                        <h2 class="text-2xl font-bold mb-6 text-ctp-green">Intelligence Artificielle & Data Science</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/AI_Fundamentals%20cred.png" alt="AI Fundamentals" class="w-16 h-16 mx-auto mb-4 rounded-lg">
+                                <h3 class="font-bold text-center mb-2">AI Fundamentals</h3>
+                                <p class="text-sm text-ctp-subtext0 text-center mb-2">IBM - Sept. 2025</p>
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded">AI Ethics</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded">ML</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded">NLP</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/Data%20science%20certificate_page-0001.jpg" alt="Data Science 101" class="w-16 h-16 mx-auto mb-4 rounded-lg">
+                                <h3 class="font-bold text-center mb-2">Data Science 101</h3>
+                                <p class="text-sm text-ctp-subtext0 text-center mb-2">IBM SkillsBuild - Sept. 2025</p>
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded">Python</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded">Data Science</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/Certificat%20SQL_page-0001.jpg" alt="SQL for Data Science" class="w-16 h-16 mx-auto mb-4 rounded-lg">
+                                <h3 class="font-bold text-center mb-2">SQL for Data Science</h3>
+                                <p class="text-sm text-ctp-subtext0 text-center mb-2">Great Learning - Nov. 2024</p>
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded">SQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud & Azure Section -->
+                    <div class="scroll-element">
+                        <h2 class="text-2xl font-bold mb-6 text-ctp-sky">Cloud & Technologies Microsoft Azure</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/microsoft-certified-azure-fundamentals.png" alt="Azure AZ-900" class="w-16 h-16 mx-auto mb-4 rounded-lg">
+                                <h3 class="font-bold text-center mb-2">Azure AZ-900</h3>
+                                <p class="text-sm text-ctp-subtext0 text-center mb-2">Microsoft - Janv. 2025</p>
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="bg-ctp-sky text-ctp-crust text-xs px-2 py-1 rounded">Azure</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/microsoft-certified-azure-fundamentals.png" alt="AI-900" class="w-16 h-16 mx-auto mb-4 rounded-lg">
+                                <h3 class="font-bold text-center mb-2">Azure AI Fundamentals (AI-900)</h3>
+                                <p class="text-sm text-ctp-subtext0 text-center mb-2">Microsoft - Mai 2025</p>
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="bg-ctp-sky text-ctp-crust text-xs px-2 py-1 rounded">Azure AI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cybersecurity Section -->
+                    <div class="scroll-element">
+                        <h2 class="text-2xl font-bold mb-6 text-ctp-flamingo">Cybersécurité</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/image.png" alt="Cybersecurity Fundamentals" class="w-16 h-16 mx-auto mb-4 rounded-lg">
+                                <h3 class="font-bold text-center mb-2">Cybersecurity Fundamentals</h3>
+                                <p class="text-sm text-ctp-subtext0 text-center mb-2">IBM - Sept. 2025</p>
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="bg-ctp-flamingo text-ctp-crust text-xs px-2 py-1 rounded">Cryptographie</span>
+                                    <span class="bg-ctp-flamingo text-ctp-crust text-xs px-2 py-1 rounded">Security</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Languages Section -->
+                    <div class="scroll-element">
+                        <h2 class="text-2xl font-bold mb-6 text-ctp-lavender">Langues</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/1725769165534_page-0001.jpg" alt="EF SET C2" class="w-16 h-16 mx-auto mb-4 rounded-lg">
+                                <h3 class="font-bold text-center mb-2">Certification C2 en Anglais</h3>
+                                <p class="text-sm text-ctp-subtext0 text-center">EF SET - Déc. 2023</p>
+                            </div>
+
+                            <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/delf%20b2.jpeg" alt="DELF B2" class="w-16 h-16 mx-auto mb-4 rounded-lg">
+                                <h3 class="font-bold text-center mb-2">DELF B2 en Français</h3>
+                                <p class="text-sm text-ctp-subtext0 text-center">Institut Français - Janv. 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page: Contact -->
+        <div class="page hidden" id="page-contact">
+            <div class="max-w-4xl mx-auto px-4 py-12">
+                <div class="text-center mb-12 scroll-element">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-ctp-blue">Contact</h1>
+                    <p class="text-ctp-subtext0 text-lg">Restons en contact pour discuter d'opportunités</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Contact Information -->
+                    <div class="space-y-6 scroll-element">
+                        <div class="bg-ctp-surface1 rounded-xl p-6">
+                            <h2 class="text-2xl font-bold mb-6 text-ctp-blue">Informations de Contact</h2>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-ctp-blue rounded-full p-3">
+                                        <svg class="w-5 h-5 text-ctp-crust" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">Email</p>
+                                        <a href="mailto:skanderchbb@gmail.com" class="text-ctp-blue hover:text-ctp-sky">skanderchbb@gmail.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-ctp-blue rounded-full p-3">
+                                        <svg class="w-5 h-5 text-ctp-crust" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">LinkedIn</p>
+                                        <a href="https://www.linkedin.com/in/skander-chebbi-a52779270/" target="_blank" class="text-ctp-blue hover:text-ctp-sky">Profil LinkedIn</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-ctp-blue rounded-full p-3">
+                                        <svg class="w-5 h-5 text-ctp-crust" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">Localisation</p>
+                                        <p class="text-ctp-subtext0">Tunis, Tunisie</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-ctp-green rounded-full p-3">
+                                        <svg class="w-5 h-5 text-ctp-crust" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M9 11H7v9c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-9h-2v7H9v-7zm.83-6.8L11 3l1.17 1.2c.14.14.36.14.5 0C13.58 3.29 15 4.4 15 6v1H9V6c0-1.6 1.42-2.71 2.33-3.8.14-.14.36-.14.5 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">Disponibilité</p>
+                                        <p class="text-ctp-green">Disponible pour stage/emploi</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-ctp-surface1 rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4 text-ctp-blue">Mes Compétences</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="text-center">
+                                    <div class="bg-ctp-blue rounded-full w-12 h-12 mx-auto mb-2 flex items-center justify-center">
+                                        <span class="text-ctp-crust font-bold">PY</span>
+                                    </div>
+                                    <p class="text-sm">Python</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="bg-ctp-sky rounded-full w-12 h-12 mx-auto mb-2 flex items-center justify-center">
+                                        <span class="text-ctp-crust font-bold">SQL</span>
+                                    </div>
+                                    <p class="text-sm">SQL</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="bg-ctp-lavender rounded-full w-12 h-12 mx-auto mb-2 flex items-center justify-center">
+                                        <span class="text-ctp-crust font-bold">BI</span>
+                                    </div>
+                                    <p class="text-sm">Power BI</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="bg-ctp-green rounded-full w-12 h-12 mx-auto mb-2 flex items-center justify-center">
+                                        <span class="text-ctp-crust font-bold">AZ</span>
+                                    </div>
+                                    <p class="text-sm">Azure</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="scroll-element">
+                        <div class="bg-ctp-surface1 rounded-xl p-6">
+                            <h2 class="text-2xl font-bold mb-6 text-ctp-blue">Envoyez-moi un message</h2>
+                            <form class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium mb-2">Nom</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 bg-ctp-surface2 border border-ctp-overlay0 rounded-lg focus:ring-2 focus:ring-ctp-blue focus:border-transparent" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 bg-ctp-surface2 border border-ctp-overlay0 rounded-lg focus:ring-2 focus:ring-ctp-blue focus:border-transparent" required>
+                                </div>
+                                <div>
+                                    <label for="subject" class="block text-sm font-medium mb-2">Sujet</label>
+                                    <input type="text" id="subject" name="subject" class="w-full px-4 py-2 bg-ctp-surface2 border border-ctp-overlay0 rounded-lg focus:ring-2 focus:ring-ctp-blue focus:border-transparent" required>
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 bg-ctp-surface2 border border-ctp-overlay0 rounded-lg focus:ring-2 focus:ring-ctp-blue focus:border-transparent" required></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-gradient-to-r from-ctp-blue to-ctp-sky hover:from-ctp-sky hover:to-ctp-lavender text-ctp-crust font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105">
+                                    Envoyer le Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="px-4 pt-8 pb-24 text-center text-ctp-text bg-ctp-surface2">
+        <p>&copy; 2025 Skander Chebbi. Tous droits réservés.</p>
+        <div class="flex justify-center space-x-4 mt-4">
+            <a href="mailto:skanderchbb@gmail.com" class="hover:scale-110 hover:text-ctp-blue transition-all duration-200">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/skander-chebbi-a52779270/" target="_blank" class="hover:scale-110 hover:text-ctp-blue transition-all duration-200">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        const navLinks = document.queryS
