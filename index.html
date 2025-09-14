@@ -1642,10 +1642,72 @@ document.addEventListener('DOMContentLoaded', function() {
         // Scroll event listener
         window.addEventListener('scroll', handleScrollAnimations);
 
-        // Smooth scrolling for anchor links
+                // Smooth scrolling for anchor links
         document.addEventListener('click', function(e) {
             if (e.target.tagName === 'A' && e.target.getAttribute('href') && e.target.getAttribute('href').startsWith('#')) {
                 e.preventDefault();
                 const targetId = e.target.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
-                if (targetElement)
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+
+        // Add some interactive effects
+        document.addEventListener('mouseover', function(e) {
+            if (e.target.classList.contains('project-card')) {
+                e.target.style.transform = 'translateY(-8px) scale(1.02)';
+            }
+        });
+
+        document.addEventListener('mouseout', function(e) {
+            if (e.target.classList.contains('project-card')) {
+                e.target.style.transform = 'translateY(0) scale(1)';
+            }
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease-in-out';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Add theme persistence (optional)
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.className = savedTheme;
+        }
+
+        // Performance optimization: Debounce scroll events
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            if (scrollTimeout) {
+                clearTimeout(scrollTimeout);
+            }
+            scrollTimeout = setTimeout(handleScrollAnimations, 10);
+        });
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Add focus management for accessibility
+        navLinks.forEach(link => {
+            link.addEventListener('focus', function() {
+                this.style.outline = '2px solid #89b4fa';
+            });
+            link.addEventListener('blur', function() {
+                this.style.outline = 'none';
+            });
+        });
+    </script>
+
+
+</body></html>
