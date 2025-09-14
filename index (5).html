@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skander Chebbi - Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/DarkSolce/Portfolio01/refs/heads/main/ChatGPT Image 13 sept. 2025, 10_42_22.png">
+    <meta name="description" content="Portfolio de Skander Chebbi, Data Analyst junior en BI. Projets, certifications et compétences en AI, Data Science et Business Intelligence.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'ctp': {
+                            'base': '#1e1e2e',
+                            'mantle': '#181825',
+                            'crust': '#11111b',
+                            'surface0': '#313244',
+                            'surface1': '#45475a',
+                            'surface2': '#585b70',
+                            'overlay0': '#6c7086',
+                            'overlay1': '#7f849c',
+                            'overlay2': '#9399b2',
+                            'subtext0': '#a6adc8',
+                            'subtext1': '#bac2de',
+                            'text': '#cdd6f4',
+                            'blue': '#89b4fa',
+                            'lavender': '#b4befe',
+                            'sky': '#89dceb',
+                            'green': '#a6e3a1',
+                            'flamingo': '#f2cdcd'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['SF Pro Display', 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .scroll-element {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+        .scroll-element.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .typewriter {
+            border-right: 2px solid #89b4fa;
+            animation: blink 1.5s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { border-color: #89b4fa; }
+            51%, 100% { border-color: transparent; }
+        }
+        .nav-active {
+            background-color: #45475a !important;
+            color: #cdd6f4 !important;
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-5px);
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .tech-badge {
+            transition: all 0.3s ease;
+        }
+        .tech-badge:hover {
+            transform: scale(1.05);
+        }
+        .screenshot-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .screenshot-item {
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .screenshot-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .phase-timeline {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid #89b4fa;
+            margin-left: 1rem;
+        }
+        .phase-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .phase-item:before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: #89b4fa;
+        }
+        .scrum-process {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .scrum-role {
+            background: #45475a;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .scrum-role-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-ctp-base text-ctp-text min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-ctp-surface2 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+           <!-- Logo -->
+        <div class="flex items-center">
+              <a href="#" class="nav-link bg-ctp-surface1 text-ctp-text hover:bg-ctp-overlay2 hover:text-ctp-base rounded-3xl p-3 transition-all duration-100 hover:scale-110 active:scale-95" data-page="home">
+        <div class="h-8 w-8 rounded-full bg-ctp-blue flex items-center justify-center text-ctp-crust font-bold">
+            SC
+        </div>
+     </a>
+</div>
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center space-x-2">
+                <a href="#" class="nav-link bg-ctp-surface1 text-ctp-text hover:bg-ctp-overlay2 hover:text-ctp-base rounded-3xl px-4 py-2 transition-all duration-100 hover:scale-110 active:scale-95 nav-active" data-page="home">
+                    Accueil
+                </a>
+                <a href="#" class="nav-link bg-ctp-surface1 text-ctp-text hover:bg-ctp-overlay2 hover:text-ctp-base rounded-3xl px-4 py-2 transition-all duration-100 hover:scale-110 active:scale-95" data-page="about">
+                    À propos
+                </a>
+                <a href="#" class="nav-link bg-ctp-surface1 text-ctp-text hover:bg-ctp-overlay2 hover:text-ctp-base rounded-3xl px-4 py-2 transition-all duration-100 hover:scale-110 active:scale-95" data-page="projects">
+                    Projets
+                </a>
+                <a href="#" class="nav-link bg-ctp-surface1 text-ctp-text hover:bg-ctp-overlay2 hover:text-ctp-base rounded-3xl px-4 py-2 transition-all duration-100 hover:scale-110 active:scale-95" data-page="experience">
+                    Expérience
+                </a>
+                <a href="#" class="nav-link bg-ctp-surface1 text-ctp-text hover:bg-ctp-overlay2 hover:text-ctp-base rounded-3xl px-4 py-2 transition-all duration-100 hover:scale-110 active:scale-95" data-page="certifications">
+                    Certifications
+                </a>
+                <a href="#" class="nav-link bg-ctp-surface1 text-ctp-text hover:bg-ctp-overlay2 hover:text-ctp-base rounded-3xl px-4 py-2 transition-all duration-100 hover:scale-110 active:scale-95" data-page="contact">
+                    Contact
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden rounded-3xl p-3 hover:bg-ctp-overlay2">
+                <div class="flex flex-col space-y-1">
+                    <span class="block h-0.5 w-6 bg-current"></span>
+                    <span class="block h-0.5 w-6 bg-current"></span>
+                    <span class="block h-0.5 w-6 bg-current"></span>
+                </div>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-ctp-surface2 pb-4">
+            <div class="flex flex-col space-y-2 px-4">
+                <a href="#" class="nav-link block py-2 text-center bg-ctp-surface1 rounded-3xl nav-active" data-page="home">Accueil</a>
+                <a href="#" class="nav-link block py-2 text-center bg-ctp-surface1 rounded-3xl" data-page="about">À propos</a>
+                <a href="#" class="nav-link block py-2 text-center bg-ctp-surface1 rounded-3xl" data-page="projects">Projets</a>
+                <a href="#" class="nav-link block py-2 text-center bg-ctp-surface1 rounded-3xl" data-page="experience">Expérience</a>
+                <a href="#" class="nav-link block py-2 text-center bg-ctp-surface1 rounded-3xl" data-page="certifications">Certifications</a>
+                <a href="#" class="nav-link block py-2 text-center bg-ctp-surface1 rounded-3xl" data-page="contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" class="min-h-screen">
+        <!-- Page: Home -->
+        <div class="page" id="page-home">
+            <div class="min-h-screen bg-gradient-to-br from-ctp-base to-ctp-mantle py-12 px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="mb-8 scroll-element">
+                        <div class="rounded-full mx-auto mb-6 border-4 border-ctp-overlay1 hover:border-ctp-blue hover:scale-105 transition-transform duration-300 w-48 h-48 bg-gradient-to-br from-ctp-blue to-ctp-lavender flex items-center justify-center overflow-hidden">
+                           <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/photo.png" alt="Profile" class="w-full h-full object-cover">
+                        </div>
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                            Salut, je suis <span class="text-ctp-blue">Skander</span>!
+                        </h1>
+                        <div class="text-xl md:text-2xl mt-3">
+                            <span>Je suis </span>
+                            <span id="typewriter" class="text-ctp-blue font-semibold typewriter">Data Analyst</span>
+                        </div>
+                        <p class="mt-4 text-base md:text-lg text-ctp-subtext0 max-w-xl mx-auto">
+                            Diplômé en Génie Électrique avec une expertise en Business Intelligence et Data Analytics.
+                            <br><a href="#" class="underline text-ctp-blue hover:text-ctp-lavender transition-colors nav-link" data-page="about">En savoir plus →</a>
+                        </p>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex justify-center space-x-4 mb-12 scroll-element">
+                        <a href="mailto:skanderchbb@gmail.com" class="hover:scale-110 hover:text-ctp-blue transition-all duration-200 p-3 bg-ctp-surface1 rounded-full">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/skander-chebbi-a52779270/" target="_blank" class="hover:scale-110 hover:text-ctp-blue transition-all duration-200 p-3 bg-ctp-surface1 rounded-full">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/DarkSolce" target="_blank" class="hover:scale-110 hover:text-ctp-blue transition-all duration-200 p-3 bg-ctp-surface1 rounded-full">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.020.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c极 0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Recent Projects Preview -->
+                    <div class="scroll-element">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-left">Projets Récents</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                            <!-- Project Card -->
+                            <div class="project-card bg-ctp-mantle rounded-xl overflow-hidden shadow-lg border border-ctp-surface1" data-project="coexpert">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/coexpert.jpeg" alt="CoExpert Project" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-semibold mb-2">CoExpert</h3>
+                                    <div class="flex flex-wrap gap-2 mb-3">
+                                        <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Python</span>
+                                        <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">SQL Server</span>
+                                        <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Power BI</span>
+                                    </div>
+                                    <p class="text-ctp-subtext0 text-sm">Application d'aide à la décision pour l'expertise financière...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button class="nav-link bg-gradient-to-r from-ctp-blue to-ctp-sky hover:from-ctp-sky hover:to-ctp-lavender text-ctp-crust font-semibold py-3 px-6 rounded-full transition-all transform hover:scale-105" data-page="projects">
+                                Voir Tous les Projets
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page: About -->
+        <div class="page hidden" id="page-about">
+            <div class="max-w-4xl mx-auto px-4 py-12">
+                <div class="text-center mb-12 scroll-element">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-ctp-blue">À Propos de Moi</h1>
+                <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-ctp-blue to-ctp-lavender flex items-center justify-center overflow-hidden">
+                    <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/photo.png" alt="Profile" class="w-full h-full object-cover">
+                </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="bg-ctp-surface1 rounded-xl p-8 scroll-element">
+                        <h2 class="text-2xl font-bold mb-4 text-ctp-blue">Mon Parcours</h2>
+                        <p class="text-ctp-subtext0 leading-relaxed">
+                            Diplômé en Génie Électrique (ISET Radès), avec une expérience pratique en maintenance électrique industrielle et pétrolière sur PLC, moteurs et systèmes de pompage. Actuellement en Master Analyse de Données & Business Intelligence (CODABI), j'allie expertise terrain et data pour optimiser la fiabilité, la sécurité et la performance des opérations.
+                        </p>
+                    </div>
+
+                    <div class="bg-ctp-surface1 rounded-xl p-8 scroll-element">
+                        <h2 class="text-2xl font-bold mb-4 text-ctp-blue">Compétences Techniques</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="font-semibold mb-2">Data Analytics</h3>
+                                <ul class="text-ctp-subtext0 space-y-1">
+                                    <li>• Python</li>
+                                    <li>• SQL</li>
+                                    <li>• Power BI</li>
+                                    <li>• Microsoft Azure</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-2">Maintenance Industrielle</h3>
+                                <ul class="text-ctp-subtext0 space-y-1">
+                                    <li>• PLC</li>
+                                    <li>• Moteurs électriques</li>
+                                    <li>• Systèmes de pompage</li>
+                                    <li>• AutoCAD</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-ctp-surface1 rounded-xl p-8 scroll-element">
+                        <h2 class="text-2xl font-bold mb-4 text-ctp-blue">Objectifs Professionnels</h2>
+                        <p class="text-ctp-subtext0 leading-relaxed">
+                            Passionné par l'application de l'ingénierie et de l'analyse de données à des projets innovants. Je cherche à contribuer à l'optimisation des processus industriels à travers des solutions data-driven, en combinant mon expertise technique en génie électrique avec mes compétences en business intelligence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page: Projects -->
+        <div class="page hidden" id="page-projects">
+            <div class="max-w-6xl mx-auto px-4 py-12">
+                <div class="text-center mb-12 scroll-element">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-ctp-blue">Mes Projets</h1>
+                    <p class="text-ctp-subtext0 text-lg">Découvrez mes réalisations en Data Analytics et Business Intelligence</p>
+                </div>
+
+                <div class="space-y-12">
+                    <!-- Featured Project -->
+                    <div class="bg-ctp-surface1 rounded-xl overflow-hidden shadow-lg scroll-element">
+                        <div class="md:flex">
+                            <div class="md:w-1/2">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/coexpert.jpeg" alt="CoExpert" class="w-full h-64 md:h-full object-cover">
+                            </div>
+                            <div class="md:w-1/2 p-8">
+                                <div class="flex items-center mb-4">
+                                    <span class="bg-ctp-green text-ctp-crust text-sm px-3 py-1 rounded-full mr-3">Projet Principal</span>
+                                </div>
+                                <h2 class="text-3xl font-bold mb-4 text-ctp-blue">CoExpert</h2>
+                                <p class="text-ctp-subtext0 mb-4">
+                                    <strong>Contexte:</strong> Application d'aide à la décision pour l'expertise financière. Automatisation et optimisation de l'analyse du FEC en centralisant, structurant et visualisant les écritures comptables.
+                                </p>
+                                <p class="text-ctp-subtext0 mb-4">
+                                    <strong>Rôle:</strong> Développement complet en méthodologie Scrum. Exploration et traitement du FEC (Python), modélisation des données (SQL Server), tableaux de bord (Power BI), intégration front-end (React).
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Python</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">SQL Server</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Power BI</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">React</span>
+                                </div>
+                                <p class="text-sm text-ctp-green font-semibold mb-4">
+                                    📈 Résultats: Analyse 30% plus rapide, détection accélérée des anomalies
+                                </p>
+                                <button class="project-view-btn bg-ctp-blue hover:bg-ctp-sky text-ctp-crust px-6 py-2 rounded-full font-semibold transition-colors" data-project="coexpert">
+                                    Voir les Détails du Projet →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Projects Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-ctp-surface1 rounded-xl overflow-hidden shadow-lg scroll-element">
+                            <div class="h-48 bg-gradient-to-br from-ctp-blue to-ctp-sky"></div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Analyse Prédictive</h3>
+                                <p class="text-ctp-subtext0 text-sm mb-4">Modèle de prédiction de maintenance préventive pour équipements industriels.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Python</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">ML</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-ctp-surface1 rounded-xl overflow-hidden shadow-lg scroll-element">
+                            <div class="h-48 bg-gradient-to-br from-ctp-lavender to-ctp-blue"></div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Dashboard BI</h3>
+                                <p class="text-ctp-subtext0 text-sm mb-4">Tableau de bord interactif pour le suivi des KPIs industriels.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Power BI</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">SQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-ctp-surface1 rounded-xl overflow-hidden shadow-lg scroll-element">
+                            <div class="h-48 bg-gradient-to-br from-ctp-green to-ctp-blue"></div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Automatisation ETL</h3>
+                                <p class="text-ctp-subtext0 text-sm mb-4">Pipeline de données automatisé pour l'ingestion et transformation de données.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Python</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Azure</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page: CoExpert Project Details -->
+        <div class="page hidden" id="page-coexpert">
+            <div class="max-w-6xl mx-auto px-4 py-12">
+                <!-- Back Button -->
+                <div class="mb-8 scroll-element">
+                    <button class="back-button flex items-center text-ctp-blue hover:text-ctp-sky font-semibold transition-colors" data-page="projects">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                        Retour
+                    </button>
+                </div>
+
+                <!-- Project Header -->
+                <div class="text-center mb-12 scroll-element">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-ctp-blue">CoExpert</h1>
+                    <p class="text-ctp-subtext0 text-lg max-w-3xl mx-auto">Application d'aide à la décision pour l'expertise financière - Automatisation et optimisation de l'analyse du Fichier des Écritures Comptables (FEC)</p>
+                    <div class="flex flex-wrap justify-center gap-2 mt-6">
+                        <span class="tech-badge bg-ctp-blue text-ctp-crust text-sm px-3 py-1 rounded-full">Python</span>
+                        <span class="tech-badge bg-ctp-blue text-ctp-crust text-sm px-3 py-1 rounded-full">SQL Server</span>
+                        <span class="tech-badge bg-ctp-blue text-ctp-crust text-sm px-3 py-1 rounded-full">Power BI</span>
+                        <span class="tech-badge bg-ctp-blue text-ctp-crust text-sm px-3 py-1 rounded-full">React</span>
+                        <span class="tech-badge bg-ctp-blue text-ctp-crust text-sm px-3 py-1 rounded-full">FastAPI</span>
+                        <span class="tech-badge bg-ctp-blue text-ctp-crust text-sm px-3 py-1 rounded-full">Scrum</span>
+                    </div>
+                </div>
+
+                <!-- Project Overview -->
+                <div class="bg-ctp-surface1 rounded-xl p-8 mb-12 scroll-element">
+                    <h2 class="text-3xl font-bold mb-6 text-ctp-blue">Aperçu du Projet</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-ctp-green">Contexte</h3>
+                            <p class="text-ctp-subtext0 mb-6">
+                                CoExpert est une application web innovante conçue pour révolutionner le processus d'expertise financière. 
+                                Le projet visait à automatiser l'analyse du Fichier des Écritures Comptables (FEC), obligatoire pour toutes 
+                                les entreprises françaises, en transformant un processus manuel fastideux en une analyse automatisée et intelligente.
+                            </p>
+                            <p class="text-ctp-subtext0">
+                                Développé selon la méthodologie Agile Scrum, ce projet a nécessité une collaboration étroite avec des experts 
+                                comptables pour comprendre leurs besoins spécifiques et leurs processus de travail.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-ctp-green">Objectifs</h3>
+                            <ul class="text-ctp-subtext0 space-y-3">
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    Automatiser l'import et la validation du FEC selon les normes réglementaires
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    Détecter automatiquement les anomalies et les écritures suspectes
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    Fournir des visualisations intuitives pour l'analyse des données financières
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    Réduire le temps d'analyse de 30% par rapport aux méthodes traditionnelles
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    Centraliser toutes les écritures comptables pour une expertise complète
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Methodologies -->
+                <div class="bg-ctp-surface1 rounded-xl p-8 mb-12 scroll-element">
+                    <h2 class="text-3xl font-bold mb-6 text-ctp-blue">Méthodologies</h2>
+                    
+                    <h3 class="text-xl font-semibold mb-4 text-ctp-green">Méthodologie Agile Scrum</h3>
+                    <p class="text-ctp-subtext0 mb-6">
+                        Le projet a été développé selon la méthodologie Agile Scrum, avec des sprints de deux semaines. 
+                        Cette approche a permis une adaptation rapide aux changements et une livraison progressive des fonctionnalités.
+                    </p>
+                    
+                    <div class="scrum-process">
+                        <div class="scrum-role">
+                            <div class="scrum-role-icon">👨‍💼</div>
+                            <h4 class="font-semibold mb-2">Product Owner</h4>
+                            <p class="text-ctp-subtext0 text-sm">M. Rayen Jmili (Entreprise)</p>
+                        </div>
+                        <div class="scrum-role">
+                            <div class="scrum-role-icon">👨‍🏫</div>
+                            <h4 class="font-semibold mb-2">Scrum Master</h4>
+                            <p class="text-ctp-subtext0 text-sm">M. Bilel Zemzem (ISET Bizerte)</p>
+                        </div>
+                        <div class="scrum-role">
+                            <div class="scrum-role-icon">👨‍💻</div>
+                            <h4 class="font-semibold mb-2">Équipe de Développement</h4>
+                            <p class="text-ctp-subtext0 text-sm">Skander Chebbi & Bayrem Jmili</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-8 mb-4 text-ctp-green">Processus ETL (Extract, Transform, Load)</h3>
+                    <p class="text-ctp-subtext0 mb-4">
+                        Le processus ETL a été essentiel pour transformer les données brutes du FEC en informations exploitables :
+                    </p>
+                    <ul class="text-ctp-subtext0 space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-ctp-green mr-2">•</span>
+                            <strong>Extraction:</strong> Collecte des données brutes provenant du fichier FEC
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-ctp-green mr-2">•</span>
+                            <strong>Transformation:</strong> Nettoyage, enrichissement et conversion des données
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-ctp-green mr-2">•</span>
+                            <strong>Chargement:</strong> Insertion des données transformées dans la base SQL Server
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Technical Implementation -->
+                <div class="bg-ctp-surface1 rounded-xl p-8 mb-12 scroll-element">
+                    <h2 class="text-3xl font-bold mb-6 text-ctp-blue">Implémentation Technique</h2>
+                    
+                    <h3 class="text-xl font-semibold mb-4 text-ctp-green">Architecture du Projet</h3>
+                    <div class="mb-8">
+                        <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio01/refs/heads/main/architecture.webp" alt="Architecture CoExpert" class="w-full rounded-lg mb-4">
+                        <p class="text-ctp-subtext0 text-sm text-center">Architecture technique du projet CoExpert montrant les différents composants et leurs interactions</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-ctp-green">Backend</h3>
+                            <ul class="text-ctp-subtext0 space-y-3">
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    <strong>Python Django:</strong> Framework principal pour le backend et l'API REST
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    <strong>Pandas & NumPy:</strong> Traitement des données et analyse du FEC
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    <strong>SQL Server:</strong> Base de données pour le stockage des écritures comptables
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    <strong>Celery:</strong> Gestion des tâches asynchrones pour le traitement des fichiers
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-ctp-green">Frontend</h3>
+                            <ul class="text-ctp-subtext0 space-y-3">
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    <strong>React.js:</strong> Interface utilisateur moderne et réactive
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    <strong>Redux:</strong> Gestion de l'état de l'application
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    <strong>Chart.js:</strong> Visualisations des données financières
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    <strong>Material-UI:</strong> Composants d'interface utilisateur
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-ctp-green">Fonctionnalités Principales</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="feature-card bg-ctp-surface2 rounded-lg p-6">
+                            <div class="text-ctp-blue text-2xl mb-4">📊</div>
+                            <h4 class="font-semibold mb-2">Import et Validation du FEC</h4>
+                            <p class="text-ctp-subtext0 text-sm">Interface intuitive pour l'import des fichiers avec validation automatique du format réglementaire</p>
+                        </div>
+                        <div class="feature-card bg-ctp-surface2 rounded-lg p-6">
+                            <div class="text-ctp-blue text-2xl mb-4">🔍</div>
+                            <h4 class="font-semibold mb-2">Détection d'Anomalies</h4>
+                            <p class="text-ctp-subtext0 text-sm">Algorithmes avancés pour identifier les écritures suspectes et les patterns anormaux</p>
+                        </div>
+                        <div class="feature-card bg-ctp-surface2 rounded-lg p-6">
+                            <div class="text-ctp-blue text-2xl mb-4">📈</div>
+                            <h4 class="font-semibold mb-2">Tableaux de Bord Interactifs</h4>
+                            <p class="text-ctp-subtext0 text-sm">Visualisations Power BI intégrées pour l'analyse approfondie des données financières</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Development -->
+                <div class="bg-ctp-surface1 rounded-xl p-8 mb-12 scroll-element">
+                    <h2 class="text-3xl font-bold mb-6 text-ctp-blue">Développement du Projet</h2>
+                    
+                    <h3 class="text-xl font-semibold mb-4 text-ctp-green">Sprints Réalisés</h3>
+                    
+                    <div class="phase-timeline mb-8">
+                        <div class="phase-item">
+                            <h4 class="text-lg font-semibold mb-2">Sprint 1 (3 semaines) - Importation et application d'ETL du fichier FEC</h4>
+                            <ul class="text-ctp-subtext0 space-y-2">
+                                <li>Importation du fichier FEC via l'interface React</li>
+                                <li>Exécution du pipeline ETL en Python/SQLAlchemy</li>
+                                <li>Validation comptable automatisée</li>
+                                <li>Enrichissement des écritures avec des dimensions analytiques</li>
+                            </ul>
+                        </div>
+                        <div class="phase-item">
+                            <h4 class="text-lg font-semibold mb-2">Sprint 2 (4 semaines) - Navigation et recherche des écritures comptables</h4>
+                            <ul class="text-ctp-subtext0 space-y-2">
+                                <li>Développement de l'interface de consultation (Balance, Journal, Balance auxiliaire, Grand Livre)</li>
+                                <li>Mise en place des filtres de recherche avancés</li>
+                                <li>Connexion en temps réel à la base de données SQL Server</li>
+                            </ul>
+                        </div>
+                        <div class="phase-item">
+                            <h4 class="text-lg font-semibold mb-2">Sprint 3 (3 semaines) - Création de tableaux de bord interactifs</h4>
+                            <ul class="text-ctp-subtext0 space-y-2">
+                                <li>Connexion entre Power BI et SQL Server</li>
+                                <li>Conception de tableaux de bord dynamiques (Bilan synthétique, Graphiques en anneau, Courbes de tendance)</li>
+                                <li>Analyse temporelle segmentée des écritures comptables</li>
+                            </ul>
+                        </div>
+                        <div class="phase-item">
+                            <h4 class="text-lg font-semibold mb-2">Sprint 4 (2 semaines) - Intégration des tableaux de bord Power BI dans React</h4>
+                            <ul class="text-ctp-subtext0 space-y-2">
+                                <li>Génération et publication des rapports Power BI</li>
+                                <li>Configuration des paramètres d'intégration (iFrame)</li>
+                                <li>Intégration dans l'application React</li>
+                                <li>Tests et validation de l'expérience utilisateur</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-ctp-green">Rôle et Contributions</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold mb-2 text-ctp-blue">Développement Backend</h4>
+                            <ul class="text-ctp-subtext0 space-y-2">
+                                <li>Conception et implémentation de l'API REST avec FastAPI</li>
+                                <li>Développement des algorithmes de traitement du FEC avec Pandas</li>
+                                <li>Modélisation de la base de données SQL Server</li>
+                                <li>Implémentation des tâches asynchrones pour le traitement des fichiers</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2 text-ctp-blue">Développement Frontend</h4>
+                            <ul class="text-ctp-subtext0 space-y-2">
+                                <li>Création des composants React réutilisables</li>
+                                <li>Intégration des visualisations Power BI via iFrame</li>
+                                <li>Gestion de l'état d'application avec Redux</li>
+                                <li>Optimisation des performances pour les grands volumes de données</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results & Impact -->
+                <div class="bg-ctp-surface1 rounded-xl p-8 mb-12 scroll-element">
+                    <h2 class="text-3xl font-bold mb-6 text-ctp-blue">Résultats et Impact</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-ctp-green">Succès du Projet</h3>
+                            <ul class="text-ctp-subtext0 space-y-3">
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    <strong>Analyse 30% plus rapide:</strong> Réduction significative du temps nécessaire à l'expertise comptable
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    <strong>Détection améliorée:</strong> Identification de 40% d'anomalies supplémentaires par rapport aux méthodes manuelles
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    <strong>Interface intuitive:</strong> Feedback positif des experts comptables sur l'expérience utilisateur
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-ctp-green mr-2">•</span>
+                                    <strong>Livraison dans les temps:</strong> Projet complété avec 2 semaines d'avance sur le planning initial
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-ctp-green">Technologies Maîtrisées</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Python</span>
+                                <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Django</span>
+                                <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Pandas</span>
+                                <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">SQL Server</span>
+                                <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">React</span>
+                                <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Redux</span>
+                                <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Power BI</span>
+                                <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">FastAPI</span>
+                                <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Docker</span>
+                                <span class="tech-badge bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Git</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-ctp-green">Captures d'Écran</h3>
+                    <div class="screenshot-gallery">
+                        <div class="screenshot-item">
+                            <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio01/refs/heads/main/Dashboard.jpeg" alt="Tableau de bord CoExpert" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <p class="text-ctp-text text-sm font-semibold">Tableau de bord principal avec visualisation des données</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio01/refs/heads/main/interface test de confirmite .png" alt="Import FEC CoExpert" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <p class="text-ctp-text text-sm font-semibold">Interface d'import du Fichier des Écritures Comptables</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio01/refs/heads/main/Detection d'anomali.jpeg" alt="Détection d'anomalies CoExpert" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <p class="text-ctp-text text-sm font-semibold">Module de détection des anomalies comptables</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Links -->
+                <div class="text-center scroll-element">
+                    <h2 class="text-3xl font-bold mb-6 text-ctp-blue">Liens du Projet</h2>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="https://www.coexpert.com/" target="_blank" class="bg-ctp-blue hover:bg-ctp-sky text-ctp-crust px-6 py-3 rounded-full font-semibold transition-colors flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </svg>
+                            Site Web Live
+                        </a>
+                        <a href="#" class="bg-ctp-green hover:bg-ctp-blue text-ctp-crust px-6 py-3 rounded-full font-semibold transition-colors flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                            </svg>
+                            Documentation Technique
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page: Experience -->
+        <div class="page hidden" id="page-experience">
+            <div class="max-w-4xl mx-auto px-4 py-12">
+                <div class="text-center mb-12 scroll-element">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-ctp-blue">Expérience Professionnelle</h1>
+                    <p class="text-ctp-subtext0 text-lg">Mon parcours professionnel et mes stages</p>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Experience Item -->
+                    <div class="bg-ctp-surface1 rounded-xl p-6 scroll-element">
+                        <div class="flex flex-col md:flex-row md:items-center mb-4">
+                            <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/logo-dynamix-full-1.webp" alt="Dynamix Services" class="w-16 h-16 rounded-lg mb-4 md:mb-0 md:mr-6 object-contain bg-white p-2">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-ctp-blue">Stagiaire en alternance</h3>
+                                <p class="text-ctp-text font-semibold">Dynamix Services</p>
+                                <p class="text-ctp-subtext0">Avril 2025 – Mai 2025 | Bizerte, Tunisie</p>
+                            </div>
+                        </div>
+                        <ul class="text-ctp-subtext0 space-y-2">
+                            <li>• Participation à un projet décisionnel: Power BI pour la visualisation, Python pour l'analyse, SQL Server pour la donnée</li>
+                            <li>• Renforcement des compétences en data analytics dans un contexte réel</li>
+                        </ul>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Power BI</span>
+                            <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Python</span>
+                            <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">SQL Server</span>
+                            <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">React.js</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-ctp-surface1 rounded-xl p-6 scroll-element">
+                        <div class="flex flex-col md:flex-row md:items-center mb-4">
+                            <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/sotulub_logo.jpeg" alt="SOTULUB" class="w-16 h-16 rounded-lg mb-4 md:mb-0 md:mr-6 object-contain bg-white p-2">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-ctp-blue">Stagiaire - Stage de fin d'études</h3>
+                                <p class="text-ctp-text font-semibold">SOTULUB (Société Tunisienne de Lubrifiants)</p>
+                                <p class="text-ctp-subtext0">Mars 2024 – Juin 2024 | Bizerte, Tunisie</p>
+                            </div>
+                        </div>
+                        <ul class="text-ctp-subtext0 space-y-2">
+                            <li>• Maintenance, rénovation, mise à niveau de moteurs à pompe et systèmes électriques industriels</li>
+                            <li>• Maintenance préventive, dépannage, optimisation des performances</li>
+                        </ul>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">AutoCAD</span>
+                            <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">EPLAN</span>
+                            <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">CAO</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-ctp-surface1 rounded-xl p-6 scroll-element">
+                        <div class="flex flex-col md:flex-row md:items-center mb-4">
+                            <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/1631324856832.jpeg" alt="STIR" class="w-16 h-16 rounded-lg mb-4 md:mb-0 md:mr-6 object-contain bg-white p-2">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-ctp-blue">Stagiaire - Perfectionnement</h3>
+                                <p class="text-ctp-text font-semibold">STIR (Société Tunisienne des Industries de Raffinage)</p>
+                                <p class="text-ctp-subtext0">Janvier 2023 – Mars 2023 | Bizerte, Tunisie</p>
+                            </div>
+                        </div>
+                        <ul class="text-ctp-subtext0 space-y-2">
+                            <li>• Surveillance et entretien de systèmes électriques: moteurs, pompes, automatismes</li>
+                            <li>• Étude de cas sur procédures de raffinage, sécurité et fiabilité des installations</li>
+                        </ul>
+                    </div>
+                         <div class="bg-ctp-surface1 rounded-xl p-6 scroll-element">
+                         <div class="flex flex-col md:flex-row md:items-center mb-4">
+                            <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/1631324856832.jpeg" alt="STIR" class="w-16 h-16 rounded-lg mb-4 md:mb-0 md:mr-6 object-contain bg-white p-2">
+                            <div class="flex-1">
+                       <h3 class="text-xl font-bold text-ctp-blue">Stagiaire — Initiation</h3>
+                       <p class="text-ctp-text font-semibold">STIR (Société Tunisienne des Industries de Raffinage)</p>
+                       <p class="text-ctp-subtext0">Janv. 2021 – Févr. 2021 | Bizerte, Tunisie</p>
+                    </div>
+                    </div>
+                      <ul class="text-ctp-subtext0 space-y-2">
+                        <li>• Découverte des pratiques industrielles en maintenance électrique et sécurité</li>
+                        <li>• Participation à la surveillance et à l'entretien des installations</li>
+                    
+                    </ul>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                           <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Maintenance Électrique</span>
+                           <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Sécurité</span>
+                           <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded-full">Industrie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page: Certifications -->
+        <div class="page hidden" id="page-certifications">
+            <div class="max-w-6xl mx-auto px-4 py-12">
+                <div class="text-center mb-12 scroll-element">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-ctp-blue">Certifications</h1>
+                    <p class="text-ctp-subtext0 text-lg">Mes certifications et formations continues</p>
+                </div>
+
+                <div class="space-y-12">
+                    <!-- AI & Data Science Section -->
+                    <div class="scroll-element">
+                        <h2 class="text-2xl font-bold mb-6 text-ctp-green">Intelligence Artificielle & Data Science</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/AI_Fundamentals%20cred.png" alt="AI Fundamentals" class="w-16 h-16 mx-auto mb-4 rounded-lg">
+                                <h3 class="font-bold text-center mb-2">AI Fundamentals</h3>
+                                <p class="text-sm text-ctp-subtext0 text-center mb-2">IBM - Sept. 2025</p>
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded">AI Ethics</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded">ML</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded">NLP</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/Data%20science%20certificate_page-0001.jpg" alt="Data Science 101" class="w-16 h-16 mx-auto mb-4 rounded-lg">
+                                <h3 class="font-bold text-center mb-2">Data Science 101</h3>
+                                <p class="text-sm text-ctp-subtext0 text-center mb-2">IBM SkillsBuild - Sept. 2025</p>
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded">Python</span>
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded">Data Science</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/Certificat%20SQL_page-0001.jpg" alt="SQL for Data Science" class="w-极 h-16 mx-auto mb-4 rounded-lg">
+                                <h3 class="font-bold text-center mb-2">SQL for Data Science</h3>
+                                <p class="text-sm text-ctp-subtext0 text-center mb-2">Great Learning - Nov. 2024</p>
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="bg-ctp-blue text-ctp-crust text-xs px-2 py-1 rounded">SQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud & Azure Section -->
+                    <div class="scroll-element">
+                        <h2 class="text-2xl font-bold mb-6 text-ctp-sky">Cloud & Technologies Microsoft Azure</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/microsoft-certified-azure-fundamentals.png" alt="Azure AZ-900" class="w-16 h-16 mx-auto mb-4 rounded-lg">
+                                <h3 class="font-bold text极 mb-2">Azure AZ-900</h3>
+                                <p class="text-sm text-ctp-subtext0 text-center mb-2">Microsoft - Janv. 2025</p>
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="bg-ctp-sky text-ctp-crust text-xs px-2 py-1 rounded">Azure</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/microsoft-certified-azure-fundamentals.png" alt="AI-900" class="w-16 h-16 mx-auto mb-4 rounded-lg">
+                                <h3 class="font-bold text-center mb-2">Azure AI Fundamentals (AI-900)</h3>
+                                <p class="text-sm text-ctp-subtext0 text-center mb-极">Microsoft - Mai 2025</p>
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="bg-极-sky text-ctp-crust text-xs px-2 py-1 rounded">Azure AI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cybersecurity Section -->
+                    <div class="scroll-element">
+                        <h2 class="text-2xl font-bold mb-6 text-ctp-flamingo">Cybersécurité</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/image.png" alt="Cybersecurity Fundamentals" class="w-16 h-16 mx-auto mb-4 rounded-lg">
+                                <h3 class="font-bold text-center mb-2">Cybersecurity Fundamentals</h3>
+                                <p class="text-sm text-ctp-subtext0 text-center mb-2">IBM - Sept. 2025</p>
+                                <div class="flex flex-wrap gap-1 justify-center">
+                                    <span class="bg-ctp-flamingo text-ctp-crust text-xs px-2 py-1 rounded">Cryptographie</span>
+                                    <span class="bg-ctp-flamingo text-ctp-crust text-xs px-2 py-1 rounded">Security</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Languages Section -->
+                    <div class="scroll-element">
+                        <h2 class="text-2xl font-bold mb-6 text-ctp-lavender">Langues</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/1725769165534_page-0001.jpg" alt="EF SET C2" class="w-16 h-16 mx-auto mb-4 rounded-lg">
+                                <h3 class="font-bold text-center mb-2">Certification C2 en Anglais</h3>
+                                <p class="text-sm text-ctp-subtext0 text-center">EF SET - Déc. 2023</p>
+                            </div>
+
+                            <div class="bg-ctp-surface1 rounded-xl p-6 hover:scale-105 transition-transform">
+                                <img src="https://raw.githubusercontent.com/DarkSolce/Portfolio/refs/heads/main/delf%20b2.jpeg" alt="DELF B2" class="w-16 h-16 mx-auto mb-4 rounded-lg">
+                                <h3 class="font-bold text-center mb-2">DELF B2 en Français</h3>
+                                <p class="text-sm text-ctp-subtext0 text-center">Institut Français - Janv. 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page: Contact -->
+        <div class="page hidden" id="page-contact">
+            <div class="max-w-4xl mx-auto px-4 py-12">
+                <div class="text-center mb-12 scroll-element">
+                    <h1 class="text-4xl md:text-5极 font-bold mb-6 text-ctp-blue">Contact</h1>
+                    <p class="text-ctp-subtext0 text-lg">N'hésitez pas à me contacter ! Que vous ayez une question, que vous souhaitiez discuter d'un projet ou simplement me dire bonjour, n'hésitez pas à utiliser le formulaire ci-dessous. Je vous répondrai dans les plus brefs délais.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:极-cols-2 gap-8">
+                    <!-- Contact Information -->
+                    <div class="space-y-6 scroll-element">
+                        <div class="bg-ctp-surface1 rounded-xl p-6">
+                            <h2 class="text-2xl font-bold mb-6 text-ctp-blue">Informations de Contact</h2>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-ctp-blue rounded-full p-3">
+                                        <svg class="w-5 h-5 text-ctp-crust" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h极c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">Email</p>
+                                        <a href="mailto:skanderchbb@gmail.com" class="text-ctp-blue hover:text-ctp-sky">skanderchbb@gmail.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-ctp-blue rounded-full p-3">
+                                        <svg class="w-5 h-5 text-ctp-crust" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9极3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-semib极">LinkedIn</p>
+                                        <a href="https://www.linkedin.com/in/skander-chebbi-a52779270/" target="_blank" class="text-ctp-blue hover:text-ctp-sky">Profil LinkedIn</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-ctp-blue rounded-full p-3">
+                                        <svg class="w-5 h-5 text-ctp-crust" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-极-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">Localisation</p>
+                                        <p class="text-ctp-subtext0">Tunis, Tunisie</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-ctp-green rounded-full p-3">
+                                        <svg class="w-5 h-5 text-ctp-crust" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M9 11H7v9c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-9h-2v7H9v-7zm.83-6.8L11 3l1.17 1.2c.14.14.36.14.50 0C13.58 3.29 15 4.4 15 6v1H9V6c0-1.6 1.42-2.71 2.33-3.8.14-.14.36-.14.5 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">Disponibilité</p>
+                                        <p class="text-ctp-green">Disponible pour stage</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-ctp-surface1 rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4 text-ctp-blue">Mes Compétences</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="text-center">
+                                    <div class="bg-ctp-blue rounded-full w-12 h-12 mx-auto mb-2 flex items-center justify-center">
+                                        <span class="text-ctp-crust font-bold">PY</span>
+                                    </div>
+                                    <p class="text-sm">Python</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="bg-ctp-sky rounded-full w-12 h-12 mx-auto mb-2 flex items-center justify-center">
+                                        <span class="text-ctp-crust font-bold">SQL</span>
+                                    </div>
+                                    <p class="text-sm">SQL</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="bg-ctp-lavender rounded-full w-12 h-12 mx-auto mb-2 flex items-center justify-center">
+                                        <span class="text-ctp-crust font-bold">BI</span>
+                                    </div>
+                                    <p class="text-sm">Power BI</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="bg-ctp-green rounded-full w-12 h-12 mx-auto mb极 flex items-center justify-center">
+                                        <span class="text-ctp-crust font-bold">AZ</span>
+                                    </div>
+                                    <p class="text-sm">Azure</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="scroll-element">
+                        <div class="bg-ctp-surface1 rounded-xl p-6">
+                            <h2 class="text-2xl font-bold mb-6 text-ctp-blue">Envoyez-moi un message</h2>
+                            <form class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium mb-2">Nom</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 bg-ctp-surface2 border border-ctp-overlay0 rounded-lg focus:ring-2 focus:ring-ctp-blue focus:border-transparent" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 bg-ctp-surface2 border border-ctp-overlay0 rounded-lg focus:ring-2 focus:ring-ctp-blue focus:border-transparent" required>
+                                </极>
+                                <div>
+                                    <label for="subject" class="block text-sm font-medium mb-2">Sujet</label>
+                                    <input type="text" id="subject" name="subject" class="w-full px-4 py-2 bg-ctp-surface2 border border-ctp-overlay0 rounded-lg focus:ring-2 focus:ring-ctp-blue focus:border-transparent" required>
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 bg-ctp-surface极 border border-ctp-overlay0 rounded-lg focus:ring-2 focus:ring-ctp-blue focus:border-transparent" required></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-gradient-to-r from-ctp-blue to-ctp-sky hover:from-ctp-sky hover:to-ctp-lavender text-ctp-crust font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105">
+                                    Envoyer le Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="px-4 pt-8 pb-24 text-center text-ctp-text bg-ctp-surface2">
+        <p>&copy; 2025 Skander Chebbi. Tous droits réservés.</p>
+        <div class="flex justify-center space-x-4 mt-4">
+            <a href="mailto:skanderchbb@gmail.com" class="hover:scale-110 hover:text-ctp-blue transition-all duration-200">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 极-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6极8 5 8-5v2z"/>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/skander-chebbi-a52779270/" target="_blank" class="hover:scale-110 hover:text-ctp-blue transition-all duration-200">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Ajoutez ce code dans votre section <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Gestionnaire spécifique pour le logo SC
+    const logoLink = document.querySelector('.flex.items-center > a.nav-link');
+    if (logoLink) {
+        logoLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            showPage('home');
+            
+            // Scroll vers le haut de la page
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+         // Correction pour le bouton "Retour aux projets"
+    document.addEventListener('DOMContentLoaded', function() {
+        // Gestionnaire pour le bouton de retour
+        const backButton = document.querySelector('.back-button');
+        if (backButton) {
+            backButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                showPage(this.dataset.page);
+            });
+        }
+
+        // Gestionnaire pour le formulaire de contact
+        const contactForm = document.querySelector('#page-contact form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Récupérer les données du formulaire
+                const formData = new FormData(this);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const subject = formData.get('subject');
+                const message = formData.get('message');
+                
+                // Créer le lien mailto
+                const mailtoLink = `mailto:skanderchbb@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+                
+                // Ouvrir le client de messagerie
+                window.location.href = mailtoLink;
+                
+                // Afficher un message de confirmation
+                alert('Votre client email va s\'ouvrir avec le message pré-rempli. Vous pouvez également me contacter directement à skanderchbb@gmail.com');
+                
+                // Réinitialiser le formulaire
+                this.reset();
+            });
+        }
+    });
+        // Navigation functionality
+        const navLinks = document.querySelectorAll('.nav-link');
+        const pages = document.querySelectorAll('.page');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const projectCards = document.querySelectorAll('.project-card');
+        const projectViewBtns = document.querySelectorAll('.project-view-btn');
+
+        // Handle navigation
+        function showPage(pageName) {
+            // Hide all pages
+            pages.forEach(page => page.classList.add('hidden'));
+            
+            // Show target page
+            const targetPage = document.getElementById(`page-${pageName}`);
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+                
+                // Trigger scroll animations
+                setTimeout(() => {
+                    const scrollElements = targetPage.querySelectorAll('.scroll-element');
+                    scrollElements.forEach(el => {
+                        el.classList.add('visible');
+                    });
+                }, 100);
+            }
+
+            // Update active nav link
+            navLinks.forEach(link => {
+                link.classList.remove('nav-active');
+                if (link.dataset.page === pageName) {
+                    link.classList.add('nav-active');
+                }
+            });
+
+            // Close mobile menu
+            mobileMenu.classList.add('hidden');
+        }
+
+        // Add click listeners to nav links
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage(link.dataset.page);
+            });
+        });
+
+        // Mobile menu toggle
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Project card click handling
+        projectCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                const project = card.dataset.project;
+                if (project) {
+                    showPage(project);
+                }
+            });
+        });
+
+        // Project view button click handling
+        projectViewBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const project = btn.dataset.project;
+                if (project) {
+                    showPage(project);
+                }
+            });
+        });
+
+        // Typewriter effect
+        const roles = [
+            "Data Analyst.",
+            "Business Intelligence.",
+            "Génie Électrique.",
+            "Oil & Gaz.",
+            "Développeur Python.",
+            "Expert SQL.",
+            "Analyste de Données.",
+            "Consultant BI.",
+            "Spécialiste Azure.",
+            "Data Scientist.",
+            "Problem Solver."
+        ];
+
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeWriter() {
+            const typewriterElement = document.getElementById('typewriter');
+            if (!typewriterElement) return;
+
+            const current = roles[roleIndex];
+            
+            if (!isDeleting && charIndex < current.length) {
+                typewriterElement.textContent = current.substring(0, charIndex + 1);
+                charIndex++;
+                setTimeout(typeWriter, 100);
+            } else if (isDeleting && charIndex > 0) {
+                typewriterElement.textContent = current.substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(typeWriter, 50);
+            } else {
+                if (!isDeleting) {
+                    isDeleting = true;
+                    setTimeout(typeWriter, 2000);
+                } else {
+                    isDeleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                    setTimeout(typeWriter, 500);
+                }
+            }
+        }
+
+        // Scroll animations
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScrollAnimations() {
+            const scrollElements = document.querySelectorAll('.scroll-element:not(.visible)');
+            scrollElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top <= window.innerHeight * 0.8) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        // Contact form handler
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize page
+            showPage('home');
+            
+            // Start typewriter effect
+            setTimeout(typeWriter, 1000);
+            
+            // Initial scroll animation check
+            handleScrollAnimations();
+
+            // Contact form
+            const contactForm = document.querySelector('#page-contact form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(contactForm);
+                    const name = formData.get('name');
+                    const email = formData.get('email');
+                    const subject = formData.get('subject');
+                    const message = formData.get('message');
+                    
+                    // Create mailto link
+                    const mailto极 = `mailto:skanderchbb@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+                    
+                    // Open email client
+                    window.location.href = mailtoLink;
+                    
+                    // Show success message
+                    alert('Votre client email va s\'ouvrir avec le message pré-rempli. Vous pouvez également me contacter directement à skanderchbb@gmail.com');
+                });
+            }
+        });
+
+        // Scroll event listener
+        window.addEventListener('scroll', handleScrollAnimations);
+
+        // Smooth scrolling for anchor links
+        document.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A' && e.target.getAttribute('href') && e.target.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const targetId = e.target.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+
+        // Add some interactive effects
+        document.addEventListener('mouseover', function(e) {
+            if (e.target.classList.contains('project-card')) {
+                e.target.style.transform = 'translateY(-8px) scale(1.02)';
+            }
+        });
+
+        document.addEventListener('mouseout', function(e) {
+            if (e.target.classList.contains('project-card')) {
+                e.target.style.transform = 'translateY(0) scale(1)';
+            }
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease-in-out';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Add theme persistence (optional)
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.className = savedTheme;
+        }
+
+        // Performance optimization: Debounce scroll events
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            if (scrollTimeout) {
+                clearTimeout(scrollTimeout);
+            }
+            scrollTimeout = setTimeout(handleScrollAnimations, 10);
+        });
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Add focus management for accessibility
+        navLinks.forEach(link => {
+            link.addEventListener('focus', function() {
+                this.style.outline = '2px solid #89b4fa';
+            });
+            link.addEventListener('blur', function() {
+                this.style.outline = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
