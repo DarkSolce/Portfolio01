@@ -897,277 +897,313 @@
     </div>
 </div>
             <!-- Page: EEG Epilepsy Detection Project Details -->
-       <div class="page hidden" id="page-eeg-epilepsy">
-            <div class="max-w-6xl mx-auto px-4 py-12">
-                <!-- Back Button -->
-                <div class="mb-8 scroll-element visible">
-                    <button class="back-button flex items-center text-ctp-lavender hover:text-ctp-blue font-semibold transition-colors" data-page="projects">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                        </svg>
-                        Retour
-                    </button>
+<div class="page hidden" id="page-eeg-epilepsy">
+    <div class="max-w-6xl mx-auto px-4 py-12">
+        <!-- Back Button -->
+        <div class="mb-8 scroll-element visible">
+            <button class="back-button flex items-center text-ctp-lavender hover:text-ctp-blue font-semibold transition-colors" data-page="projects">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Retour
+            </button>
+        </div>
+
+        <!-- Project Header -->
+        <div class="text-center mb-12 scroll-element visible">
+            <div class="text-8xl mb-6 animate-pulse">🧠</div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-ctp-lavender bg-gradient-to-r from-ctp-lavender to-ctp-blue bg-clip-text">Détection d'Épilepsie EEG</h1>
+            <p class="text-ctp-subtext0 text-lg max-w-3xl mx-auto">Pipeline de machine learning pour détecter les crises d'épilepsie à partir de signaux EEG en utilisant des techniques avancées de traitement du signal et d'intelligence artificielle</p>
+            <div class="flex flex-wrap justify-center gap-2 mt-6">
+                <span class="tech-badge bg-ctp-lavender text-ctp-crust text-sm px-3 py-1 rounded-full hover:scale-110 transition-transform">Python</span>
+                <span class="tech-badge bg-ctp-lavender text-ctp-crust text-sm px-3 py-1 rounded-full hover:scale-110 transition-transform">MNE-Python</span>
+                <span class="tech-badge bg-ctp-lavender text-ctp-crust text-sm px-3 py-1 rounded-full hover:scale-110 transition-transform">TensorFlow</span>
+                <span class="tech-badge bg-ctp-lavender text-ctp-crust text-sm px-3 py-1 rounded-full hover:scale-110 transition-transform">PyTorch</span>
+                <span class="tech-badge bg-ctp-lavender text-ctp-crust text-sm px-3 py-1 rounded-full hover:scale-110 transition-transform">Scikit-learn</span>
+                <span class="tech-badge bg-ctp-lavender text-ctp-crust text-sm px-3 py-1 rounded-full hover:scale-110 transition-transform">Jupyter</span>
+            </div>
+        </div>
+
+        <!-- Project Overview -->
+        <div class="bg-ctp-surface1 rounded-xl p-8 mb-12 scroll-element visible hover:shadow-2xl transition-shadow">
+            <h2 class="text-3xl font-bold mb-6 text-ctp-lavender">📋 Aperçu du Projet</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-ctp-surface2 rounded-lg p-6 hover:bg-ctp-overlay0 transition-colors">
+                    <h3 class="text-xl font-semibold mb-4 text-ctp-green flex items-center">
+                        <span class="mr-2">🎯</span> Contexte
+                    </h3>
+                    <p class="text-ctp-subtext0 mb-6">
+                        Ce projet vise à développer un système de détection automatique des crises d'épilepsie à partir de signaux EEG. 
+                        L'épilepsie affecte environ 50 millions de personnes dans le monde, et la détection précoce des crises peut 
+                        considérablement améliorer la qualité de vie des patients et réduire les risques associés.
+                    </p>
+                    <p class="text-ctp-subtext0">
+                        Le système utilise des techniques avancées de traitement du signal et d'apprentissage automatique pour analyser 
+                        les patterns complexes dans les données EEG et identifier les signatures caractéristiques des crises épileptiques.
+                    </p>
                 </div>
+                <div class="bg-ctp-surface2 rounded-lg p-6 hover:bg-ctp-overlay0 transition-colors">
+                    <h3 class="text-xl font-semibold mb-4 text-ctp-green flex items-center">
+                        <span class="mr-2">🚀</span> Objectifs
+                    </h3>
+                    <ul class="text-ctp-subtext0 space-y-3">
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">✓</span>
+                            Développer un pipeline reproductible d'analyse des signaux EEG
+                        </li>
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">✓</span>
+                            Créer un modèle ML/DL performant pour la détection des crises
+                        </li>
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">✓</span>
+                            Atteindre une haute précision dans la classification des épisodes
+                        </li>
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">✓</span>
+                            Fournir une documentation claire pour la réutilisation
+                        </li>
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">✓</span>
+                            Contribuer à la recherche en santé numérique
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-                <!-- Project Header -->
-                <div class="text-center mb-12 scroll-element visible">
-                    <div class="text-8xl mb-6">🧠</div>
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-ctp-lavender">Détection d'Épilepsie EEG</h1>
-                    <p class="text-ctp-subtext0 text-lg max-w-3xl mx-auto">Pipeline de machine learning pour détecter les crises d'épilepsie à partir de signaux EEG en utilisant des techniques avancées de traitement du signal et d'intelligence artificielle</p>
-                    <div class="flex flex-wrap justify-center gap-2 mt-6">
-                        <span class="tech-badge bg-ctp-lavender text-ctp-crust text-sm px-3 py-1 rounded-full">Python</span>
-                        <span class="tech-badge bg-ctp-lavender text-ctp-crust text-sm px-3 py-1 rounded-full">MNE-Python</span>
-                        <span class="tech-badge bg-ctp-lavender text-ctp-crust text-sm px-3 py-1 rounded-full">TensorFlow</span>
-                        <span class="tech-badge bg-ctp-lavender text-ctp-crust text-sm px-3 py-1 rounded-full">PyTorch</span>
-                        <span class="tech-badge bg-ctp-lavender text-ctp-crust text-sm px-3 py-1 rounded-full">Scikit-learn</span>
-                        <span class="tech-badge bg-ctp-lavender text-ctp-crust text-sm px-3 py-1 rounded-full">Jupyter</span>
+        <!-- Datasets & Methodologies -->
+        <div class="bg-ctp-surface1 rounded-xl p-8 mb-12 scroll-element visible hover:shadow-2xl transition-shadow">
+            <h2 class="text-3xl font-bold mb-6 text-ctp-lavender">📊 Datasets et Méthodologies</h2>
+            
+            <h3 class="text-xl font-semibold mb-4 text-ctp-green">Sources de Données</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="feature-card bg-ctp-surface2 rounded-lg p-6 hover:scale-105 transition-transform hover:bg-ctp-overlay0">
+                    <div class="text-ctp-lavender text-2xl mb-4">🏥</div>
+                    <h4 class="font-semibold mb-2">Temple University EEG Corpus (TUEG)</h4>
+                    <p class="text-ctp-subtext0 text-sm">Large corpus de données EEG cliniques avec annotations d'experts pour l'entraînement et la validation des modèles</p>
+                </div>
+                <div class="feature-card bg-ctp-surface2 rounded-lg p-6 hover:scale-105 transition-transform hover:bg-ctp-overlay0">
+                    <div class="text-ctp-lavender text-2xl mb-4">📊</div>
+                    <h4 class="font-semibold mb-2">CHB-MIT Scalp EEG Database</h4>
+                    <p class="text-ctp-subtext0 text-sm">Base de données spécialisée contenant des enregistrements EEG de patients pédiatriques avec épilepsie</p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4 text-ctp-green">Pipeline de Traitement</h3>
+            <div class="space-y-4">
+                <div class="phase-item bg-ctp-surface2 rounded-lg p-6 hover:bg-ctp-overlay0 transition-all hover:translate-x-2">
+                    <h4 class="text-lg font-semibold mb-2 flex items-center">
+                        <span class="bg-ctp-lavender text-ctp-crust rounded-full w-8 h-8 flex items-center justify-center mr-3">1</span>
+                        Exploration des Données
+                    </h4>
+                    <ul class="text-ctp-subtext0 space-y-2 ml-11">
+                        <li>• Analyse statistique des signaux EEG</li>
+                        <li>• Visualisation des patterns temporels et fréquentiels</li>
+                        <li>• Identification des caractéristiques des crises</li>
+                    </ul>
+                </div>
+                <div class="phase-item bg-ctp-surface2 rounded-lg p-6 hover:bg-ctp-overlay0 transition-all hover:translate-x-2">
+                    <h4 class="text-lg font-semibold mb-2 flex items-center">
+                        <span class="bg-ctp-blue text-ctp-crust rounded-full w-8 h-8 flex items-center justify-center mr-3">2</span>
+                        Prétraitement et Extraction de Features
+                    </h4>
+                    <ul class="text-ctp-subtext0 space-y-2 ml-11">
+                        <li>• Filtrage et nettoyage des signaux avec MNE-Python</li>
+                        <li>• Extraction de features temporelles et fréquentielles</li>
+                        <li>• Normalisation et préparation des données</li>
+                    </ul>
+                </div>
+                <div class="phase-item bg-ctp-surface2 rounded-lg p-6 hover:bg-ctp-overlay0 transition-all hover:translate-x-2">
+                    <h4 class="text-lg font-semibold mb-2 flex items-center">
+                        <span class="bg-ctp-green text-ctp-crust rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
+                        Modélisation et Entraînement
+                    </h4>
+                    <ul class="text-ctp-subtext0 space-y-2 ml-11">
+                        <li>• Implémentation de modèles ML classiques (SVM, Random Forest)</li>
+                        <li>• Développement de réseaux de neurones profonds</li>
+                        <li>• Optimisation des hyperparamètres</li>
+                    </ul>
+                </div>
+                <div class="phase-item bg-ctp-surface2 rounded-lg p-6 hover:bg-ctp-overlay0 transition-all hover:translate-x-2">
+                    <h4 class="text-lg font-semibold mb-2 flex items-center">
+                        <span class="bg-ctp-sky text-ctp-crust rounded-full w-8 h-8 flex items-center justify-center mr-3">4</span>
+                        Évaluation et Validation
+                    </h4>
+                    <ul class="text-ctp-subtext0 space-y-2 ml-11">
+                        <li>• Validation croisée et métriques de performance</li>
+                        <li>• Analyse de la sensibilité et spécificité</li>
+                        <li>• Tests sur données de validation indépendantes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Implementation -->
+        <div class="bg-ctp-surface1 rounded-xl p-8 mb-12 scroll-element visible hover:shadow-2xl transition-shadow">
+            <h2 class="text-3xl font-bold mb-6 text-ctp-lavender">⚙️ Implémentation Technique</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-ctp-surface2 rounded-lg p-6 hover:bg-ctp-overlay0 transition-colors">
+                    <h3 class="text-xl font-semibold mb-4 text-ctp-green flex items-center">
+                        <span class="mr-2">📡</span> Traitement du Signal
+                    </h3>
+                    <ul class="text-ctp-subtext0 space-y-3">
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">▸</span>
+                            <div><strong>MNE-Python:</strong> Traitement avancé des signaux EEG et extraction de features</div>
+                        </li>
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">▸</span>
+                            <div><strong>Pandas & NumPy:</strong> Manipulation et analyse des données temporelles</div>
+                        </li>
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">▸</span>
+                            <div><strong>SciPy:</strong> Filtrage et transformations fréquentielles</div>
+                        </li>
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">▸</span>
+                            <div><strong>Matplotlib & Seaborn:</strong> Visualisation des signaux et résultats</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-ctp-surface2 rounded-lg p-6 hover:bg-ctp-overlay0 transition-colors">
+                    <h3 class="text-xl font-semibold mb-4 text-ctp-green flex items-center">
+                        <span class="mr-2">🤖</span> Machine Learning
+                    </h3>
+                    <ul class="text-ctp-subtext0 space-y-3">
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">▸</span>
+                            <div><strong>Scikit-learn:</strong> Modèles ML classiques et métriques d'évaluation</div>
+                        </li>
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">▸</span>
+                            <div><strong>TensorFlow/PyTorch:</strong> Réseaux de neurones profonds pour la classification</div>
+                        </li>
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">▸</span>
+                            <div><strong>Jupyter Notebook:</strong> Développement itératif et documentation</div>
+                        </li>
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">▸</span>
+                            <div><strong>Git/GitHub:</strong> Versioning et collaboration</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4 text-ctp-green">Fonctionnalités Principales</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="feature-card bg-ctp-surface2 rounded-lg p-6 hover:scale-105 transition-transform hover:bg-ctp-overlay0 hover:shadow-lg">
+                    <div class="text-ctp-lavender text-3xl mb-4">📈</div>
+                    <h4 class="font-semibold mb-2">Analyse Spectrale</h4>
+                    <p class="text-ctp-subtext0 text-sm">Analyse fréquentielle avancée pour identifier les signatures EEG caractéristiques des crises</p>
+                </div>
+                <div class="feature-card bg-ctp-surface2 rounded-lg p-6 hover:scale-105 transition-transform hover:bg-ctp-overlay0 hover:shadow-lg">
+                    <div class="text-ctp-blue text-3xl mb-4">🤖</div>
+                    <h4 class="font-semibold mb-2">Classification ML/DL</h4>
+                    <p class="text-ctp-subtext0 text-sm">Modèles hybrides combinant apprentissage classique et deep learning pour une détection optimale</p>
+                </div>
+                <div class="feature-card bg-ctp-surface2 rounded-lg p-6 hover:scale-105 transition-transform hover:bg-ctp-overlay0 hover:shadow-lg">
+                    <div class="text-ctp-green text-3xl mb-4">⚡</div>
+                    <h4 class="font-semibold mb-2">Traitement Temps Réel</h4>
+                    <p class="text-ctp-subtext0 text-sm">Pipeline optimisé pour la détection en temps réel avec faible latence</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results & Impact -->
+        <div class="bg-ctp-surface1 rounded-xl p-8 mb-12 scroll-element visible hover:shadow-2xl transition-shadow">
+            <h2 class="text-3xl font-bold mb-6 text-ctp-lavender">🎯 Résultats et Impact</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-ctp-surface2 rounded-lg p-6 hover:bg-ctp-overlay0 transition-colors">
+                    <h3 class="text-xl font-semibold mb-4 text-ctp-green flex items-center">
+                        <span class="mr-2">📊</span> Performances du Modèle
+                    </h3>
+                    <ul class="text-ctp-subtext0 space-y-3">
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">✓</span>
+                            <div><strong>Pipeline reproductible:</strong> Architecture modulaire permettant la réutilisation</div>
+                        </li>
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">✓</span>
+                            <div><strong>Documentation complète:</strong> Notebooks détaillés pour chaque étape du processus</div>
+                        </li>
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">✓</span>
+                            <div><strong>Code open-source:</strong> Contribution à la communauté de recherche en santé numérique</div>
+                        </li>
+                        <li class="flex items-start hover:translate-x-2 transition-transform">
+                            <span class="text-ctp-green mr-2">✓</span>
+                            <div><strong>Approche multimodale:</strong> Combinaison de plusieurs techniques d'analyse</div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-ctp-green flex items-center">
+                        <span class="mr-2">🔬</span> Impact Recherche
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-ctp-surface2 rounded-lg p-4 hover:bg-ctp-overlay0 transition-all hover:translate-x-2">
+                            <h4 class="font-semibold text-ctp-lavender mb-2 flex items-center">
+                                <span class="mr-2">🏥</span> Santé Numérique
+                            </h4>
+                            <p class="text-ctp-subtext0 text-sm">Contribution au domaine émergent de l'IA appliquée au diagnostic médical</p>
+                        </div>
+                        <div class="bg-ctp-surface2 rounded-lg p-4 hover:bg-ctp-overlay0 transition-all hover:translate-x-2">
+                            <h4 class="font-semibold text-ctp-blue mb-2 flex items-center">
+                                <span class="mr-2">📡</span> Traitement du Signal
+                            </h4>
+                            <p class="text-ctp-subtext0 text-sm">Techniques avancées d'analyse des signaux biomédicaux</p>
+                        </div>
+                        <div class="bg-ctp-surface2 rounded-lg p-4 hover:bg-ctp-overlay0 transition-all hover:translate-x-2">
+                            <h4 class="font-semibold text-ctp-green mb-2 flex items-center">
+                                <span class="mr-2">🤖</span> Machine Learning
+                            </h4>
+                            <p class="text-ctp-subtext0 text-sm">Application du deep learning aux données temporelles complexes</p>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Project Overview -->
-                <div class="bg-ctp-surface1 rounded-xl p-8 mb-12 scroll-element visible">
-                    <h2 class="text-3xl font-bold mb-6 text-ctp-lavender">Aperçu du Projet</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="text-xl font-semibold mb-4 text-ctp-green">Contexte</h3>
-                            <p class="text-ctp-subtext0 mb-6">
-                                Ce projet vise à développer un système de détection automatique des crises d'épilepsie à partir de signaux EEG. 
-                                L'épilepsie affecte environ 50 millions de personnes dans le monde, et la détection précoce des crises peut 
-                                considérablement améliorer la qualité de vie des patients et réduire les risques associés.
-                            </p>
-                            <p class="text-ctp-subtext0">
-                                Le système utilise des techniques avancées de traitement du signal et d'apprentissage automatique pour analyser 
-                                les patterns complexes dans les données EEG et identifier les signatures caractéristiques des crises épileptiques.
-                            </p>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-4 text-ctp-green">Objectifs</h3>
-                            <ul class="text-ctp-subtext0 space-y-3">
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    Développer un pipeline reproductible d'analyse des signaux EEG
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    Créer un modèle ML/DL performant pour la détection des crises
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    Atteindre une haute précision dans la classification des épisodes
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    Fournir une documentation claire pour la réutilisation
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    Contribuer à la recherche en santé numérique
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Datasets & Methodologies -->
-                <div class="bg-ctp-surface1 rounded-xl p-8 mb-12 scroll-element visible">
-                    <h2 class="text-3xl font-bold mb-6 text-ctp-lavender">Datasets et Méthodologies</h2>
-                    
-                    <h3 class="text-xl font-semibold mb-4 text-ctp-green">Sources de Données</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                        <div class="feature-card bg-ctp-surface2 rounded-lg p-6">
-                            <div class="text-ctp-lavender text-2xl mb-4">🏥</div>
-                            <h4 class="font-semibold mb-2">Temple University EEG Corpus (TUEG)</h4>
-                            <p class="text-ctp-subtext0 text-sm">Large corpus de données EEG cliniques avec annotations d'experts pour l'entraînement et la validation des modèles</p>
-                        </div>
-                        <div class="feature-card bg-ctp-surface2 rounded-lg p-6">
-                            <div class="text-ctp-lavender text-2xl mb-4">📊</div>
-                            <h4 class="font-semibold mb-2">CHB-MIT Scalp EEG Database</h4>
-                            <p class="text-ctp-subtext0 text-sm">Base de données spécialisée contenant des enregistrements EEG de patients pédiatriques avec épilepsie</p>
-                        </div>
-                    </div>
-
-                    <h3 class="text-xl font-semibold mb-4 text-ctp-green">Pipeline de Traitement</h3>
-                    <div class="phase-timeline mb-8">
-                        <div class="phase-item">
-                            <h4 class="text-lg font-semibold mb-2">1. Exploration des Données</h4>
-                            <ul class="text-ctp-subtext0 space-y-2">
-                                <li>Analyse statistique des signaux EEG</li>
-                                <li>Visualisation des patterns temporels et fréquentiels</li>
-                                <li>Identification des caractéristiques des crises</li>
-                            </ul>
-                        </div>
-                        <div class="phase-item">
-                            <h4 class="text-lg font-semibold mb-2">2. Prétraitement et Extraction de Features</h4>
-                            <ul class="text-ctp-subtext0 space-y-2">
-                                <li>Filtrage et nettoyage des signaux avec MNE-Python</li>
-                                <li>Extraction de features temporelles et fréquentielles</li>
-                                <li>Normalisation et préparation des données</li>
-                            </ul>
-                        </div>
-                        <div class="phase-item">
-                            <h4 class="text-lg font-semibold mb-2">3. Modélisation et Entraînement</h4>
-                            <ul class="text-ctp-subtext0 space-y-2">
-                                <li>Implémentation de modèles ML classiques (SVM, Random Forest)</li>
-                                <li>Développement de réseaux de neurones profonds</li>
-                                <li>Optimisation des hyperparamètres</li>
-                            </ul>
-                        </div>
-                        <div class="phase-item">
-                            <h4 class="text-lg font-semibold mb-2">4. Évaluation et Validation</h4>
-                            <ul class="text-ctp-subtext0 space-y-2">
-                                <li>Validation croisée et métriques de performance</li>
-                                <li>Analyse de la sensibilité et spécificité</li>
-                                <li>Tests sur données de validation indépendantes</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Technical Implementation -->
-                <div class="bg-ctp-surface1 rounded-xl p-8 mb-12 scroll-element visible">
-                    <h2 class="text-3xl font-bold mb-6 text-ctp-lavender">Implémentation Technique</h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                        <div>
-                            <h3 class="text-xl font-semibold mb-4 text-ctp-green">Traitement du Signal</h3>
-                            <ul class="text-ctp-subtext0 space-y-3">
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    <strong>MNE-Python:</strong> Traitement avancé des signaux EEG et extraction de features
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    <strong>Pandas & NumPy:</strong> Manipulation et analyse des données temporelles
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    <strong>SciPy:</strong> Filtrage et transformations fréquentielles
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    <strong>Matplotlib & Seaborn:</strong> Visualisation des signaux et résultats
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-4 text-ctp-green">Machine Learning</h3>
-                            <ul class="text-ctp-subtext0 space-y-3">
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    <strong>Scikit-learn:</strong> Modèles ML classiques et métriques d'évaluation
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    <strong>TensorFlow/PyTorch:</strong> Réseaux de neurones profonds pour la classification
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    <strong>Jupyter Notebook:</strong> Développement itératif et documentation
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    <strong>Git/GitHub:</strong> Versioning et collaboration
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h3 class="text-xl font-semibold mb-4 text-ctp-green">Fonctionnalités Principales</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="feature-card bg-ctp-surface2 rounded-lg p-6">
-                            <div class="text-ctp-lavender text-2xl mb-4">📈</div>
-                            <h4 class="font-semibold mb-2">Analyse Spectrale</h4>
-                            <p class="text-ctp-subtext0 text-sm">Analyse fréquentielle avancée pour identifier les signatures EEG caractéristiques des crises</p>
-                        </div>
-                        <div class="feature-card bg-ctp-surface2 rounded-lg p-6">
-                            <div class="text-ctp-lavender text-2xl mb-4">🤖</div>
-                            <h4 class="font-semibold mb-2">Classification ML/DL</h4>
-                            <p class="text-ctp-subtext0 text-sm">Modèles hybrides combinant apprentissage classique et deep learning pour une détection optimale</p>
-                        </div>
-                        <div class="feature-card bg-ctp-surface2 rounded-lg p-6">
-                            <div class="text-ctp-lavender text-2xl mb-4">⚡</div>
-                            <h4 class="font-semibold mb-2">Traitement Temps Réel</h4>
-                            <p class="text-ctp-subtext0 text-sm">Pipeline optimisé pour la détection en temps réel avec faible latence</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Results & Impact -->
-                <div class="bg-ctp-surface1 rounded-xl p-8 mb-12 scroll-element visible">
-                    <h2 class="text-3xl font-bold mb-6 text-ctp-lavender">Résultats et Impact</h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                        <div>
-                            <h3 class="text-xl font-semibold mb-4 text-ctp-green">Performances du Modèle</h3>
-                            <ul class="text-ctp-subtext0 space-y-3">
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    <strong>Pipeline reproductible:</strong> Architecture modulaire permettant la réutilisation
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    <strong>Documentation complète:</strong> Notebooks détaillés pour chaque étape du processus
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    <strong>Code open-source:</strong> Contribution à la communauté de recherche en santé numérique
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-ctp-green mr-2">•</span>
-                                    <strong>Approche multimodale:</strong> Combinaison de plusieurs techniques d'analyse
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-4 text-ctp-green">Impact Recherche</h3>
-                            <div class="space-y-4">
-                                <div class="bg-ctp-surface2 rounded-lg p-4">
-                                    <h4 class="font-semibold text-ctp-lavender mb-2">Santé Numérique</h4>
-                                    <p class="text-ctp-subtext0 text-sm">Contribution au domaine émergent de l'IA appliquée au diagnostic médical</p>
-                                </div>
-                                <div class="bg-ctp-surface2 rounded-lg p-4">
-                                    <h4 class="font-semibold text-ctp-lavender mb-2">Traitement du Signal</h4>
-                                    <p class="text-ctp-subtext0 text-sm">Techniques avancées d'analyse des signaux biomédicaux</p>
-                                </div>
-                                <div class="bg-ctp-surface2 rounded-lg p-4">
-                                    <h4 class="font-semibold text-ctp-lavender mb-2">Machine Learning</h4>
-                                    <p class="text-ctp-subtext0 text-sm">Application du deep learning aux données temporelles complexes</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3 class="text-xl font-semibold mb-4 text-ctp-green">Technologies Maîtrisées</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-2 py-1 rounded-full">Python</span>
-                        <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-2 py-1 rounded-full">MNE-Python</span>
-                        <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-2 py-1 rounded-full">TensorFlow</span>
-                        <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-2 py-1 rounded-full">PyTorch</span>
-                        <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-2 py-1 rounded-full">Scikit-learn</span>
-                        <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-2 py-1 rounded-full">Pandas</span>
-                        <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-2 py-1 rounded-full">NumPy</span>
-                        <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-2 py-1 rounded-full">Matplotlib</span>
-                        <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-2 py-1 rounded-full">Seaborn</span>
-                        <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-2 py-1 rounded-full">Jupyter</span>
-                    </div>
-                </div>
-                
-                <!-- Project Links -->
-                <div class="text-center scroll-element visible">
-                    <h2 class="text-3xl font-bold mb-6 text-ctp-lavender">Liens du Projet</h2>
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <a href="https://github.com/DarkSolce/EEG-epilepsy-detection" target="_blank" class="bg-ctp-lavender hover:bg-ctp-blue text-ctp-crust px-6 py-3 rounded-full font-semibold transition-colors flex items-center">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.020.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
-                            </svg>
-                            Repository GitHub
-                        </a>
-                        <a href="https://github.com/DarkSolce/EEG-epilepsy-detection/blob/main/README.md" target="_blank" class="bg-ctp-blue hover:bg-ctp-sky text-ctp-crust px-6 py-3 rounded-full font-semibold transition-colors flex items-center">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
-                            </svg>
-                            Documentation
-                        </a>
+            <h3 class="text-xl font-semibold mb-4 text-ctp-green">Technologies Maîtrisées</h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-3 py-1.5 rounded-full hover:scale-110 hover:bg-ctp-blue transition-all cursor-pointer">Python</span>
+                <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-3 py-1.5 rounded-full hover:scale-110 hover:bg-ctp-blue transition-all cursor-pointer">MNE-Python</span>
+                <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-3 py-1.5 rounded-full hover:scale-110 hover:bg-ctp-blue transition-all cursor-pointer">TensorFlow</span>
+                <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-3 py-1.5 rounded-full hover:scale-110 hover:bg-ctp-blue transition-all cursor-pointer">PyTorch</span>
+                <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-3 py-1.5 rounded-full hover:scale-110 hover:bg-ctp-blue transition-all cursor-pointer">Scikit-learn</span>
+                <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-3 py-1.5 rounded-full hover:scale-110 hover:bg-ctp-blue transition-all cursor-pointer">Pandas</span>
+                <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-3 py-1.5 rounded-full hover:scale-110 hover:bg-ctp-blue transition-all cursor-pointer">NumPy</span>
+                <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-3 py-1.5 rounded-full hover:scale-110 hover:bg-ctp-blue transition-all cursor-pointer">Matplotlib</span>
+                <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-3 py-1.5 rounded-full hover:scale-110 hover:bg-ctp-blue transition-all cursor-pointer">Seaborn</span>
+                <span class="tech-badge bg-ctp-lavender text-ctp-crust text-xs px-3 py-1.5 rounded-full hover:scale-110 hover:bg-ctp-blue transition-all cursor-pointer">Jupyter</span>
+            </div>
+        </div>
+        
+        <!-- Project Links -->
+        <div class="text-center scroll-element visible">
+            <h2 class="text-3xl font-bold mb-6 text-ctp-lavender">🔗 Liens du Projet</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://github.com/DarkSolce/EEG-epilepsy-detection" target="_blank" class="bg-ctp-lavender hover:bg-ctp-blue text-ctp-crust px-8 py-4 rounded-full font-semibold transition-all hover:scale-110 hover:shadow-xl flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.020.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                    </svg>
+                    Repository GitHub
+                </a>
+                <a href="https://github.com/DarkSolce/EEG-epilepsy-detection/blob/main/README.md" target="_blank" class="bg-ctp-blue hover:bg-ctp-sky text-ctp-crust px-8 py-4 rounded-full font-semibold transition-all hover:scale-110 hover:shadow-xl flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                    Documentation
+                </a>
+                <a href="https://vimeo.com/1124015247" target="_blank" class="bg-ctp-green hover:bg-ctp-sky text-ctp-crust px-8 py-4 rounded-full font-semibold transition-all hover:scale-110 hover:shadow-xl flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                    Vidéo Démo
+                </a>
                     </div>
                 </div>
             </div>
